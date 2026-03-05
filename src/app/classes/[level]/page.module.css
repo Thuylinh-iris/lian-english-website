@@ -1,0 +1,369 @@
+.classPage {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.classHero {
+    background: var(--color-navy);
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-block;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.8125rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+}
+
+.title {
+    color: white !important;
+    font-size: 2.2rem;
+    margin-bottom: var(--space-sm);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
+}
+
+/* Vision Preview */
+.visionPreview {
+    margin-top: var(--space-xl);
+    text-align: left;
+}
+
+.visionTitle {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-gold);
+    margin-bottom: var(--space-md);
+}
+
+.outcomesList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.outcome {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.outcomeIcon {
+    color: var(--color-gold);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Barrier Section */
+.barrierSection {
+    margin-bottom: var(--space-xl);
+}
+
+.barrierHeader {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.barrierTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin-bottom: var(--space-sm);
+}
+
+.barrierSubtitle {
+    font-size: 1.125rem;
+    color: var(--color-gold);
+    font-weight: 500;
+}
+
+.barrierContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.barrierBlock {
+    background: var(--color-white);
+    border: 1px solid var(--color-grey);
+    border-left: 4px solid var(--color-navy);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+}
+
+.bridgeBlock {
+    background: var(--color-navy);
+    color: white;
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.bridgeLabel {
+    display: inline-block;
+    padding: 6px 16px;
+    background: var(--color-gold);
+    color: var(--color-navy);
+    border-radius: 100px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: var(--space-md);
+}
+
+.bridgeText {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.contentBlock {
+    background: var(--color-surface);
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--color-border);
+}
+
+.contentBlock h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contentBlock p {
+    font-size: 1.05rem;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.sectionIcon {
+    color: var(--color-accent);
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list li {
+    position: relative;
+    padding-left: 30px;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-gold);
+}
+
+.stickyCard {
+    background: var(--color-surface);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--color-gold);
+    position: sticky;
+    top: 100px;
+}
+
+.stickyCard h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: var(--color-navy);
+}
+
+.infoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.infoItem span {
+    color: var(--color-text-light);
+}
+
+.infoSpan {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.infoIcon {
+    color: var(--color-navy);
+    opacity: 0.8;
+}
+
+.infoItem:last-of-type {
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+.ctaBtn {
+    margin-top: 10px;
+    padding: 16px !important;
+    font-size: 1.1rem !important;
+}
+
+/* Syllabus Styles */
+.syllabusList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.syllabusItem {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.syllabusItem:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-gold);
+}
+
+.weekTitle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-navy);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.weekTitle::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-gold);
+}
+
+.topicList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.topicList li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    color: var(--color-text-light);
+    font-size: 1rem;
+}
+
+.topicList li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-gold);
+    font-weight: bold;
+}
+
+/* Description Text */
+.descriptionText {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text);
+    margin-bottom: 25px;
+}
+
+.descriptionText p {
+    margin-bottom: 15px;
+}
+
+.descriptionText strong {
+    color: var(--color-navy);
+    font-weight: 600;
+}
+
+.descriptionText ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.descriptionText li {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+.descriptionText h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    font-size: 1.25rem;
+    color: var(--color-navy);
+}
+
+@media (min-width: 900px) {
+    .classHero {
+        padding: 100px 0;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .grid {
+        grid-template-columns: 2fr 1fr;
+        gap: 50px;
+    }
+
+    .barrierContent {
+        flex-direction: row;
+        align-items: center;
+    }
+}

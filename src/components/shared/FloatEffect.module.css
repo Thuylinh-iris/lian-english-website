@@ -1,0 +1,109 @@
+.floatEffect {
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.floatEffect.disabled {
+  pointer-events: none;
+}
+
+/* Float variant */
+.floatEffect.float.subtle:hover {
+  transform: translateY(-4px);
+}
+
+.floatEffect.float.medium:hover {
+  transform: translateY(-8px);
+}
+
+.floatEffect.float.strong:hover {
+  transform: translateY(-12px);
+}
+
+.floatEffect.float.active.medium {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Pulse variant */
+.floatEffect.pulse.subtle:hover {
+  animation: pulse-subtle 0.6s ease-out;
+}
+
+.floatEffect.pulse.medium:hover {
+  animation: pulse 2s ease-out;
+}
+
+.floatEffect.pulse.strong:hover {
+  animation: pulse-strong 1.5s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-subtle {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-strong {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Glow variant */
+.floatEffect.glow.subtle:hover {
+  box-shadow: 0 0 12px rgba(184, 134, 11, 0.2);
+}
+
+.floatEffect.glow.medium:hover {
+  box-shadow: 0 0 20px rgba(184, 134, 11, 0.3);
+}
+
+.floatEffect.glow.strong:hover {
+  box-shadow: 0 0 28px rgba(184, 134, 11, 0.4);
+}
+
+/* Scale variant */
+.floatEffect.scale.subtle:hover {
+  transform: scale(1.02);
+}
+
+.floatEffect.scale.medium:hover {
+  transform: scale(1.04);
+}
+
+.floatEffect.scale.strong:hover {
+  transform: scale(1.06);
+}

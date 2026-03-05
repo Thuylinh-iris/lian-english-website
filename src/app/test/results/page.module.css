@@ -1,0 +1,234 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #0F2039 0%, #1a3a5c 100%);
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 50px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.successIcon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0F2039;
+  margin-bottom: 15px;
+}
+
+.emailNote {
+  font-size: 1rem;
+  color: #5A6C7D;
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #E3F2FD;
+  border-radius: 8px;
+}
+
+.resultsSection {
+  margin-bottom: 40px;
+}
+
+.levelCard {
+  background: linear-gradient(135deg, #B8860B 0%, #D4A017 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.levelLabel {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.levelValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.scoreCard {
+  background: #F8F9FA;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.scoreLabel {
+  font-size: 0.9rem;
+  color: #5A6C7D;
+  margin-bottom: 5px;
+}
+
+.scoreValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0F2039;
+}
+
+.classCard {
+  background: #F8F9FA;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.classCard h3 {
+  font-size: 0.9rem;
+  color: #5A6C7D;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.className {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0F2039;
+  margin-bottom: 8px;
+}
+
+.classDetails {
+  font-size: 0.95rem;
+  color: #5A6C7D;
+}
+
+.ctaSection {
+  margin-bottom: 30px;
+  padding-top: 20px;
+  border-top: 2px solid #F0F0F0;
+}
+
+.ctaSection h2 {
+  font-size: 1.8rem;
+  color: #0F2039;
+  margin-bottom: 10px;
+}
+
+.ctaSection p {
+  font-size: 1rem;
+  color: #5A6C7D;
+  margin-bottom: 25px;
+}
+
+.messengerButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 18px;
+  background: #0084FF;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.messengerButton:hover {
+  background: #0066CC;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 132, 255, 0.3);
+}
+
+.emailButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px;
+  background: transparent;
+  color: #0F2039;
+  border: 2px solid #0F2039;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.emailButton:hover {
+  background: #0F2039;
+  color: white;
+}
+
+.buttonIcon {
+  font-size: 1.5rem;
+}
+
+.followUp {
+  background: #F8F9FA;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.followUp p {
+  margin-bottom: 10px;
+  color: #0F2039;
+}
+
+.followUp ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.followUp li {
+  padding: 8px 0;
+  color: #5A6C7D;
+  font-size: 0.95rem;
+  padding-left: 20px;
+  position: relative;
+}
+
+.followUp li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #B8860B;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .levelValue {
+    font-size: 2rem;
+  }
+
+  .messengerButton {
+    font-size: 1.1rem;
+    padding: 16px;
+  }
+}

@@ -1,0 +1,113 @@
+.progressTracker {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: fit-content;
+}
+
+.level {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Size variants */
+.progressTracker.sm .iconWrapper {
+  width: 32px;
+  height: 32px;
+}
+
+.progressTracker.sm .label {
+  font-size: 0.75rem;
+}
+
+.progressTracker.md .iconWrapper {
+  width: 48px;
+  height: 48px;
+}
+
+.progressTracker.md .label {
+  font-size: 0.875rem;
+}
+
+.progressTracker.lg .iconWrapper {
+  width: 64px;
+  height: 64px;
+}
+
+.progressTracker.lg .label {
+  font-size: 1rem;
+}
+
+/* Icon wrapper */
+.iconWrapper {
+  border-radius: 50%;
+  background: var(--color-grey);
+  border: 2px solid var(--color-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-grey-dark);
+  transition: all 0.3s ease;
+}
+
+.level.completed .iconWrapper {
+  background: var(--color-navy);
+  border-color: var(--color-navy);
+  color: var(--color-gold);
+}
+
+.level.current .iconWrapper {
+  background: var(--color-navy);
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  box-shadow: 0 0 0 4px rgba(184, 134, 11, 0.3);
+}
+
+.levelNumber {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Label */
+.label {
+  margin-top: var(--space-sm);
+  font-weight: 500;
+  color: var(--color-grey-dark);
+  text-align: center;
+}
+
+.level.completed .label,
+.level.current .label {
+  color: var(--color-navy);
+  font-weight: 600;
+}
+
+/* Connector */
+.connector {
+  width: 40px;
+  height: 2px;
+  background: var(--color-grey);
+  position: relative;
+  top: -1px;
+  z-index: 1;
+}
+
+.progressTracker.sm .connector {
+  width: 24px;
+}
+
+.progressTracker.lg .connector {
+  width: 60px;
+}
+
+.connectorCompleted {
+  background: var(--color-navy);
+}
+
+.connectorActive {
+  background: linear-gradient(90deg, var(--color-navy) 0%, var(--color-gold) 100%);
+}

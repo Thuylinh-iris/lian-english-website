@@ -1,0 +1,123 @@
+.footer {
+    background-color: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    padding-top: 60px;
+}
+
+.footerGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footerBrand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logoImage {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    border-radius: 8px;
+}
+
+.logoText {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+.footerDescription {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    max-width: 300px;
+    line-height: 1.5;
+}
+
+.socialLinks {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.socialLinks a {
+    color: var(--color-primary);
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.socialLinks a:hover {
+    opacity: 1;
+}
+
+.footerTitle {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footerLinks ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footerLinks a {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.footerLinks a:hover {
+    color: var(--color-accent);
+}
+
+.footerContact p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footerIcon {
+    color: var(--color-accent);
+    flex-shrink: 0;
+}
+
+.footerContact a {
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.footerContact a:hover {
+    text-decoration: underline;
+}
+
+.footerBottom {
+    background-color: var(--color-surface-alt);
+    padding: 20px 0;
+    text-align: center;
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+    .footerGrid {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    }
+}

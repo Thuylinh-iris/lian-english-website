@@ -1,0 +1,448 @@
+.classesPage {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #0F2039 0%, #1a3a5c 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 0 80px;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.heroIcon {
+    color: #B8860B;
+    margin-bottom: var(--space-md);
+}
+
+.hero h1 {
+    color: white !important;
+    font-size: 2.8rem;
+    margin-bottom: var(--space-md);
+    font-weight: 800;
+}
+
+.heroSubtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Courses Grid */
+.coursesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.courseCard {
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.courseCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.courseHeader {
+    padding: 30px;
+    color: white;
+}
+
+.levelBadge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.courseTitle {
+    color: white !important;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.courseSubtitle {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.courseBody {
+    padding: 25px;
+}
+
+/* Quick Info */
+.quickInfo {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+.infoIcon {
+    color: var(--color-accent);
+}
+
+/* Barrier Preview */
+.barrierPreview {
+    margin-bottom: 20px;
+}
+
+.barrierTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: 8px;
+}
+
+.barrierText {
+    font-size: 15px;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Bridge Preview */
+.bridgePreview {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(184, 134, 11, 0.08);
+    border-radius: var(--radius-md);
+    border-left: 3px solid #B8860B;
+}
+
+.bridgeTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #B8860B;
+    margin-bottom: 8px;
+}
+
+.bridgeText {
+    font-size: 15px;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* Outcomes Preview */
+.outcomesPreview {
+    margin-bottom: 20px;
+}
+
+.outcomesTitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+}
+
+.outcomesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.outcomeItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--color-text);
+    margin-bottom: 8px;
+}
+
+.outcomeIcon {
+    color: #10b981;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Card Actions */
+.cardActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+
+.learnMoreBtn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: var(--color-accent);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.learnMoreBtn:hover {
+    background: #9a7209;
+}
+
+.testBtn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    background: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.testBtn:hover {
+    background: var(--color-accent);
+    color: white;
+}
+
+/* Not Sure Section */
+.notSureSection {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.notSureTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.notSureText {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+}
+
+.notSureActions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.primaryBtn {
+    padding: 16px 40px;
+    background: var(--color-accent);
+    color: white;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+    background: #9a7209;
+    transform: translateY(-2px);
+}
+
+.notSureNote {
+    font-size: 14px;
+    color: var(--color-text-light);
+}
+
+/* Comparison Section */
+.comparisonSection {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.comparisonTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.comparisonTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--color-surface);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.comparisonTable th {
+    background: var(--color-primary);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.comparisonTable td {
+    padding: 15px;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 15px;
+    color: var(--color-text);
+}
+
+.comparisonTable tr:last-child td {
+    border-bottom: none;
+}
+
+.comparisonTable tr:hover {
+    background: rgba(184, 134, 11, 0.05);
+}
+
+/* FAQ Section */
+.faqSection {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faqTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+}
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+}
+
+.faqItem {
+    background: var(--color-surface);
+    padding: 25px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.faqItem h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+.faqItem p {
+    font-size: 15px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ctaTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+}
+
+.ctaText {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: var(--space-lg);
+    line-height: 1.6;
+}
+
+.ctaActions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.secondaryBtn {
+    padding: 16px 40px;
+    background: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+    background: var(--color-accent);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .coursesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .cardActions {
+        flex-direction: column;
+    }
+
+    .comparisonTable {
+        font-size: 13px;
+    }
+
+    .comparisonTable th,
+    .comparisonTable td {
+        padding: 10px;
+    }
+
+    .ctaActions {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,159 @@
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--color-white);
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.scrolled {
+    box-shadow: var(--shadow-md);
+    border-bottom: 1px solid var(--color-grey);
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logoImage {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, var(--color-navy), var(--color-gold));
+    border-radius: 8px;
+}
+
+.logoText {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+.navMenu {
+    display: none;
+    list-style: none;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.navMenu a {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-navy);
+    transition: color 0.2s ease;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+
+.navMenu a:hover {
+    color: var(--color-gold);
+}
+
+.navActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navCta {
+    display: none;
+    background-color: var(--color-navy);
+    color: white;
+    padding: 10px 20px;
+    border-radius: var(--radius-sm);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    text-decoration: none;
+}
+
+.navCta:hover {
+    background-color: var(--color-gold);
+    color: var(--color-navy);
+    transform: translateY(-1px);
+}
+
+.mobileMenuBtn {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--color-navy);
+    cursor: pointer;
+    padding: 4px;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-grey);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-md) var(--space-lg);
+    animation: slideDown 0.3s ease-out;
+}
+
+.mobileNavList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin: 0;
+    padding: 0;
+}
+
+.mobileNavList a {
+    display: block;
+    padding: var(--space-sm) 0;
+    font-weight: 500;
+    color: var(--color-navy);
+    border-bottom: 1px solid var(--color-grey);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.mobileNavList a:hover {
+    color: var(--color-gold);
+}
+
+.mobileCta {
+    color: var(--color-gold) !important;
+    font-weight: 700 !important;
+}
+
+@media (min-width: 768px) {
+
+    .navMenu,
+    .navCta {
+        display: flex;
+    }
+
+    .mobileMenuBtn {
+        display: none;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

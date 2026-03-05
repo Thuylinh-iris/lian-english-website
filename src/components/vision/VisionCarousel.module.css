@@ -1,0 +1,168 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.trackContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+}
+
+.track {
+  display: flex;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 0 var(--space-sm);
+  opacity: 0.4;
+  transform: scale(0.92);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slideContent {
+  padding: var(--space-xs);
+}
+
+/* Navigation Buttons */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 10;
+}
+
+.navButton:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.navButton:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.prev {
+  left: -24px;
+}
+
+.next {
+  right: -24px;
+}
+
+/* Indicators */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.indicator {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.indicatorInner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--color-border);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover .indicatorInner {
+  background: var(--color-primary-light);
+}
+
+.indicator.activeIndicator .indicatorInner {
+  background: var(--color-primary);
+}
+
+/* Progress Bar */
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-surface-alt);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  transform-origin: left;
+  animation-name: progress;
+  animation-timing-function: linear;
+}
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%;
+  }
+
+  .prev {
+    left: var(--space-xs);
+  }
+
+  .next {
+    right: var(--space-xs);
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .indicators {
+    gap: var(--space-sm);
+  }
+
+  .indicator {
+    width: 32px;
+  }
+}

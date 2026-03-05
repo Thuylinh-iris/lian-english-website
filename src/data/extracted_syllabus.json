@@ -1,0 +1,632 @@
+{
+  "a1": {
+    "description": "Communicate with Confidence A1 là chương trình 12&nbsp;tuần dành cho người mới bắt đầu hoặc mất gốc, giúp bạn xây dựng nền tảng từ 0 tới A1 và sẵn sàng bước vào cấp độ A2.",
+    "suitableFor": [
+      "Người hoàn toàn mới với tiếng Anh, muốn học lại bài bản.",
+      "Học sinh – sinh viên từng tiếp xúc với tiếng Anh nhưng mất gốc.",
+      "Người đi làm chưa tự tin giao tiếp trong các tình huống đơn giản."
+    ],
+    "outcomes": [
+      "Chào hỏi, giới thiệu bản thân, gia đình, nghề nghiệp.",
+      "Tham gia cuộc hội thoại ngắn về hoạt động hằng ngày, sở thích.",
+      "Hỏi – trả lời thông tin cá nhân, mua sắm, hỏi đường.",
+      "Đọc – viết tin nhắn, email rất cơ bản."
+    ],
+    "syllabus": [
+      {
+        "title": "Tuần 1: Welcome!",
+        "topics": [
+          "Chào hỏi và giới thiệu tên, quốc tịch của mình",
+          "Nói về công việc của bản thân và người khác",
+          "Đánh vần tên và hỏi thông tin cá nhân cơ bản",
+          "Sử dụng ngữ điệu chính xác khi chào hỏi",
+          "Viết tin nhắn giới thiệu bản thân với dấu câu đúng"
+        ]
+      },
+      {
+        "title": "Tuần 2: People",
+        "topics": [
+          "Mô tả vị trí của mọi người và đếm từ 11-100",
+          "Nói về gia đình và bạn bè bằng tính từ sở hữu",
+          "Có các cuộc trò chuyện ngắn về cảm xúc",
+          "Hỏi về thông tin cá nhân của ba người khác nhau",
+          "Viết mô tả một bức ảnh sử dụng từ nối \"and\""
+        ]
+      },
+      {
+        "title": "Tuần 3: Things",
+        "topics": [
+          "Nói về những thứ yêu thích và màu sắc",
+          "Hỏi và trả lời về đồ vật trên bàn làm việc",
+          "Mua sắm quần áo và hỏi giá cả",
+          "Thảo luận về thói quen mua sắm của mọi người",
+          "Viết hồ sơ cá nhân sử dụng \"and, but\""
+        ]
+      },
+      {
+        "title": "Tuần 4: Every Day",
+        "topics": [
+          "Nói về thói quen ăn uống và tần suất các hoạt động",
+          "Mô tả một ngày trong cuộc sống và nói giờ",
+          "Đặt món trong quán café một cách tự nhiên",
+          "Hỏi về thói quen hàng ngày của ai đó",
+          "Viết email cho bạn và tạo câu hỏi về thói quen"
+        ]
+      },
+      {
+        "title": "Tuần 5: Action (Phần 1)",
+        "topics": [
+          "Nói về đồng nghiệp tốt và mô tả mọi người",
+          "Thảo luận về khả năng và điều bạn có thể làm",
+          "Sử dụng đại từ tân ngữ để liên kết câu tự nhiên",
+          "Làm bài quiz về khả năng cá nhân",
+          "Viết về một người bạn tốt sử dụng đại từ"
+        ]
+      },
+      {
+        "title": "Tuần 6: Action (Phần 2)",
+        "topics": [
+          "Đưa ra yêu cầu và lời đề nghị một cách lịch sự",
+          "Nói về sinh nhật và các tháng trong năm",
+          "Thảo luận về ngày sinh nhật của mình",
+          "Hiểu người khác khi họ nhờ giúp đỡ",
+          "Viết về sinh nhật của bạn"
+        ]
+      },
+      {
+        "title": "Tuần 7: Where? (Phần 1)",
+        "topics": [
+          "Chỉ vị trí của đồ vật trong các phòng",
+          "Mô tả nơi bạn sống và các địa điểm trong thành phố",
+          "Sử dụng trọng âm câu chính xác",
+          "Nói về thành phố lý tưởng của bạn",
+          "Viết bài đăng về khu vực của bạn sử dụng dấu phẩy"
+        ]
+      },
+      {
+        "title": "Tuần 8: Where? (Phần 2)",
+        "topics": [
+          "Hỏi đường và tìm hiểu vị trí các địa điểm",
+          "Nói về sáu giờ khám phá một thành phố",
+          "Hiểu các biển báo và chỉ dẫn trong tòa nhà",
+          "Thảo luận về chương trình du lịch",
+          "Mô tả một tour du lịch thành phố"
+        ]
+      },
+      {
+        "title": "Tuần 9: Healthy Lives (Phần 1)",
+        "topics": [
+          "Hỏi về các hoạt động hàng ngày làm bạn khỏe mạnh",
+          "Kể về những người hùng thời thơ ấu",
+          "Mô tả người nổi tiếng trong quá khứ",
+          "Sử dụng trọng âm câu để nhấn mạnh ý chính",
+          "Viết bài đăng online về sức khỏe với dấu câu đúng"
+        ]
+      },
+      {
+        "title": "Tuần 10: Healthy Lives (Phần 2)",
+        "topics": [
+          "Nói về các vấn đề sức khỏe và bộ phận cơ thể",
+          "Thảo luận về thể thao và tập thể dục",
+          "Có cuộc trò chuyện khi không cảm thấy khỏe",
+          "Làm khảo sát về thể thao và tập thể dục",
+          "Viết bài \"Lời khuyên hữu ích\" về sức khỏe"
+        ]
+      },
+      {
+        "title": "Tuần 11: Time Out (Phần 1)",
+        "topics": [
+          "Kể về kỳ nghỉ cuối tuần và các hoạt động trong quá khứ",
+          "Thảo luận về hoạt động giải trí và cụm từ thời gian",
+          "Đọc tin nhắn nhóm về cuối tuần của mọi người",
+          "Nói về những việc bạn đã làm",
+          "Viết tin nhắn nhóm sử dụng từ nối \"and, but, then\""
+        ]
+      },
+      {
+        "title": "Tuần 12: Time Out (Phần 2)",
+        "topics": [
+          "Mua vé du lịch và hỏi thông tin giao thông",
+          "Nói về điều gì đó bạn muốn thử",
+          "Hiểu cuộc trò chuyện về mua vé",
+          "Thảo luận về chương trình Kodo drummers",
+          "Hoàn thành bảng câu hỏi về sở thích và mong muốn"
+        ]
+      }
+    ]
+  },
+  "a2": {
+    "description": "Communicate with Confidence A2 là chương trình 24&nbsp;tuần (chia 2 giai đoạn) giúp người học A1 vững chắc lên trình độ A2, tự tin giao tiếp trong các tình huống hàng ngày và nơi làm việc.",
+    "suitableFor": [],
+    "outcomes": [
+      "Giới thiệu bản thân và đặt câu hỏi về thông tin cá nhân.",
+      "Tham gia các cuộc hội thoại ngắn về gia đình, công việc, sở thích.",
+      "Đọc – viết email, tin nhắn đơn giản có cấu trúc.",
+      "Sử dụng đúng thì hiện tại đơn/tiếp diễn và quá khứ đơn ở mức cơ bản."
+    ],
+    "syllabus": [
+      {
+        "title": "Tuần 1: Hi!",
+        "topics": [
+          "Giới thiệu bản thân và hỏi thông tin cá nhân của người khác",
+          "Nói về công việc và việc học của mình và người khác",
+          "Sử dụng ngữ điệu chính xác khi đặt câu hỏi yes/no",
+          "Hiểu được khi người khác giới thiệu về bản thân họ",
+          "Viết hồ sơ cá nhân đơn giản với thông tin chính xác"
+        ]
+      },
+      {
+        "title": "Tuần 2: Same but Different",
+        "topics": [
+          "Mô tả tính cách và thói quen của người thân trong gia đình",
+          "So sánh sự giống và khác nhau giữa các thành viên gia đình",
+          "Sử dụng các cụm từ thông dụng để mô tả người",
+          "Phát âm chính xác đuôi -s của ngôi thứ ba số ít",
+          "Nói về một người bạn hoặc thành viên gia đình một cách chi tiết"
+        ]
+      },
+      {
+        "title": "Tuần 3: Let's Meet & Family and Friends",
+        "topics": [
+          "Đề nghị các hoạt động và sắp xếp cuộc hẹn",
+          "Diễn đạt cảm xúc và phản ứng với các đề nghị",
+          "Sử dụng ngữ điệu thể hiện sự quan tâm và hứng thú",
+          "Hiểu tin nhắn giữa bạn bè về việc sắp xếp gặp mặt",
+          "Lập kế hoạch thời gian rảnh cùng với bạn bè"
+        ]
+      },
+      {
+        "title": "Tuần 4: Can't Live Without It",
+        "topics": [
+          "Nói về thói quen ăn uống và thực phẩm yêu thích",
+          "Hỏi và trả lời về lượng thức ăn trong tủ lạnh",
+          "Phát âm chính xác các từ có âm yếu /ə/",
+          "Hiểu cuộc trò chuyện về thói quen mua sắm thực phẩm",
+          "Viết bình luận online về món ăn yêu thích"
+        ]
+      },
+      {
+        "title": "Tuần 5: Your Lifestyle and You",
+        "topics": [
+          "Mô tả thói quen hàng ngày và tần suất làm việc gì đó",
+          "Thảo luận về những gì quan trọng trong cuộc sống",
+          "Sử dụng từ nối để liên kết ý tưởng",
+          "Đọc và làm bài kiểm tra về lối sống",
+          "Nói về mức độ ưu tiên các hoạt động trong cuộc sống"
+        ]
+      },
+      {
+        "title": "Tuần 6: Eating Out & The Indian Relay",
+        "topics": [
+          "Đặt món ăn trong nhà hàng một cách lịch sự và tự nhiên",
+          "Giúp người khác hiểu menu khi họ không rõ",
+          "Sử dụng ngữ điệu lịch sự khi giao tiếp",
+          "Đọc bài viết về ảnh chụp món ăn trên mạng",
+          "Mô tả một sự kiện đặc biệt mà bạn đã tham gia"
+        ]
+      },
+      {
+        "title": "Tuần 7: Come In",
+        "topics": [
+          "Mô tả căn hộ và bố cục các phòng trong nhà",
+          "Chỉ ra vị trí của đồ đạc và nội thất",
+          "Phát âm chính xác âm /ɪ/ và /iː/",
+          "Hiểu khi ai đó nói về căn hộ của họ",
+          "Viết mô tả ngôi nhà cho website bất động sản"
+        ]
+      },
+      {
+        "title": "Tuần 8: Too Much Stuff",
+        "topics": [
+          "Nói về những đồ vật bạn có và không có trong nhà",
+          "Mô tả đặc điểm và chất lượng của các vật dụng",
+          "Sử dụng trọng âm câu để nhấn mạnh thông tin quan trọng",
+          "Đọc bài viết về cách \"tạm biệt\" với đồ đạc thừa thãi",
+          "Mô tả và so sánh các vật dụng trong nhà"
+        ]
+      },
+      {
+        "title": "Tuần 9: What Can I Bring & Your Neighbourhood",
+        "topics": [
+          "Đưa ra lời mời và đề nghị mang theo thứ gì đó",
+          "Chấp nhận lời mời và hỏi về các yêu cầu cần thiết",
+          "Mô tả khu vực địa phương và các tiện ích xung quanh",
+          "Sử dụng nhịp điệu tự nhiên khi nói các cụm từ",
+          "Đưa ra lời khuyên cho bạn về đất nước của bạn"
+        ]
+      },
+      {
+        "title": "Tuần 10: What a Decade!",
+        "topics": [
+          "Kể về thời điểm quan trọng trong cuộc đời bạn",
+          "Mô tả cảm xúc và trạng thái trong quá khứ",
+          "Phát âm chính xác dạng yếu và mạnh của \"was, were\"",
+          "Nghe podcast về các sự kiện trong thập niên 2010",
+          "Viết về một thời điểm đặc biệt sử dụng cụm từ thời gian"
+        ]
+      },
+      {
+        "title": "Tuần 11: Life in Numbers",
+        "topics": [
+          "Hỏi và trả lời về số lượng, kích thước, khoảng cách",
+          "Kiểm tra xem người khác có hiểu thông tin bạn đưa ra không",
+          "Sử dụng ngữ điệu để kiểm tra sự hiểu biết",
+          "Đọc bài viết với những sự thật thú vị về con số",
+          "Hỏi đáp về các con số thế giới một cách tự nhiên"
+        ]
+      },
+      {
+        "title": "Tuần 12: Where Can I Get...? & Sakura Time",
+        "topics": [
+          "Xin trợ giúp khi mua giày và quần áo trong cửa hàng",
+          "Mua sắm giúp bạn bè khi họ nhờ vả",
+          "Đưa ra lời khuyên về thời điểm tốt nhất để đi du lịch",
+          "Sử dụng từ nối để kết nối các ý tưởng",
+          "Xem chương trình về mùa hoa anh đào ở Nhật Bản"
+        ]
+      },
+      {
+        "title": "Tuần 13: Then and Now",
+        "topics": [
+          "So sánh cuộc sống hiện tại với quá khứ",
+          "Kể về những thay đổi lớn đã xảy ra trong cuộc đời",
+          "Phát âm chính xác đuôi -ed của động từ quy tắc",
+          "Đọc bài viết về những thay đổi lớn trong cuộc sống",
+          "Thảo luận về cuộc sống \"ngày ấy và bây giờ\""
+        ]
+      },
+      {
+        "title": "Tuần 14: What Went Wrong?",
+        "topics": [
+          "Kể về các sự kiện không như ý trong quá khứ",
+          "Hỏi chi tiết về những gì đã xảy ra",
+          "Phát âm chính xác các động từ bất quy tắc",
+          "Hiểu người khác kể về những sự kiện tồi tệ",
+          "Mô tả một sự kiện quan trọng bằng từ nối"
+        ]
+      },
+      {
+        "title": "Tuần 15: Sorry I'm Late & My Weekend Was...",
+        "topics": [
+          "Xin lỗi và giải thích lý do chậm trễ một cách thuyết phục",
+          "Giúp bạn bè kể câu chuyện khi họ gặp khó khăn",
+          "Sử dụng ngữ điệu phù hợp khi xin lỗi",
+          "Đọc bài viết về những lý do chậm trễ trong thời đại số",
+          "Kể về hoạt động cuối tuần và đánh giá trải nghiệm"
+        ]
+      },
+      {
+        "title": "Tuần 16: Meet Me in Town",
+        "topics": [
+          "Mô tả người bạn đang tìm qua điện thoại",
+          "Nhận diện người qua cách họ ăn mặc và hành động",
+          "Phát âm dạng yếu của \"are\" trong câu",
+          "Hiểu khi ai đó mô tả người họ đang tìm",
+          "Viết mô tả một nhóm người trong ảnh"
+        ]
+      },
+      {
+        "title": "Tuần 17: My Way",
+        "topics": [
+          "So sánh các phương tiện giao thông khác nhau",
+          "Mô tả hành trình đi làm hoặc đi học của bạn",
+          "Sử dụng trọng âm câu với tính từ so sánh",
+          "Đọc về những cách đi làm khác thường",
+          "Thảo luận về ưu nhược điểm của các phương tiện"
+        ]
+      },
+      {
+        "title": "Tuần 18: Getting Around & Cities: Nature's New Wild",
+        "topics": [
+          "Hỏi đường và chỉ đường một cách chính xác",
+          "Giúp một nhóm người lập kế hoạch đi chơi",
+          "Sử dụng trọng âm để sửa thông tin sai",
+          "Đọc tờ rơi về thành phố Dublin",
+          "Kể về một trải nghiệm thú vị ở thành phố"
+        ]
+      },
+      {
+        "title": "Tuần 19: Odd Jobs",
+        "topics": [
+          "Nói về các công việc phù hợp với người trong lớp",
+          "Mô tả kỹ năng và phẩm chất cần thiết cho từng nghề",
+          "Phát âm chính xác dạng yếu của a, an, the",
+          "Đọc bài viết về những công việc thú vị",
+          "Thảo luận về công việc mơ ước và lý do"
+        ]
+      },
+      {
+        "title": "Tuần 20: An Extra Day",
+        "topics": [
+          "Thảo luận và lựa chọn công việc tình nguyện phù hợp",
+          "So sánh hoạt động thường ngày và hoạt động đặc biệt",
+          "Phát âm liên kết âm /t/ trong lời nói",
+          "Nghe podcast về công việc tình nguyện",
+          "Viết blog về trải nghiệm làm tình nguyện"
+        ]
+      },
+      {
+        "title": "Tuần 21: I'm Calling to Check & Would You Like to...?",
+        "topics": [
+          "Gọi điện để hỏi thông tin hoặc cung cấp thông tin",
+          "Cung cấp thông tin người khác cần biết",
+          "Sử dụng ngữ điệu thân thiện khi gọi điện",
+          "Hiểu tin nhắn tự động qua điện thoại",
+          "Làm khảo sát về kỹ năng của mọi người"
+        ]
+      },
+      {
+        "title": "Tuần 22: Trip Advice",
+        "topics": [
+          "Nói về thành phố tốt nhất để thăm quan và lý do",
+          "Đề xuất những hoạt động tuyệt vời nhất ở một nơi",
+          "Phát âm chính xác âm -t trong so sánh nhất",
+          "Đọc diễn đàn thảo luận về du lịch",
+          "Đưa ra lời khuyên du lịch chi tiết và hữu ích"
+        ]
+      },
+      {
+        "title": "Tuần 23: Surprise Travel",
+        "topics": [
+          "Phỏng vấn ai đó và đề xuất chuyến đi phù hợp",
+          "Nói về kế hoạch du lịch và dự định sắp tới",
+          "Phát âm dạng yếu của \"to\" trong kế hoạch",
+          "Hiểu podcast về du lịch bất ngờ",
+          "Viết mô tả chuyến đi sử dụng từ nối nguyên nhân-kết quả"
+        ]
+      },
+      {
+        "title": "Tuần 24: At a Hotel & Arctic Academy",
+        "topics": [
+          "Yêu cầu và đề nghị dịch vụ tại khách sạn",
+          "Thảo luận về một câu chuyện ngắn với người khác",
+          "Sử dụng ngữ điệu lịch sự khi yêu cầu",
+          "Đọc bài viết về câu hỏi của khách hàng khách sạn",
+          "Kể về một chuyến đi khó khăn nhưng đáng nhớ"
+        ]
+      }
+    ]
+  },
+  "a2-plus": {
+    "description": "Communicate with Confidence A2+ là chương trình học tiếng Anh online chuyên sâu dành cho học viên đã có nền tảng A2, bao gồm:",
+    "suitableFor": [],
+    "outcomes": [
+      "Giao tiếp về các chủ đề đa dạng và ít quen thuộc hơn",
+      "Duy trì và mở rộng hội thoại dài hơn với cấu trúc câu phức tạp",
+      "Diễn đạt ý tưởng một cách mạch lạc, rõ ràng và logic",
+      "Hiểu và phản hồi nhanh hơn trong những buổi học trực tiếp"
+    ],
+    "syllabus": []
+  },
+  "b1": {
+    "description": "Communicate with Confidence B1 kéo dài 24&nbsp;tuần (2 giai đoạn) giúp bạn đạt mức độc lập (Independent) theo CEFR: <em>hiểu và tham gia giao tiếp trong đa dạng bối cảnh công việc & đời sống</em>.",
+    "suitableFor": [
+      "Học viên đã hoàn thành A2+ và muốn nâng cao để dùng tiếng Anh độc lập hơn.",
+      "Người đi làm cần thuyết trình ngắn, thảo luận, viết email chi tiết.",
+      "Sinh viên muốn chuẩn bị cho chương trình trao đổi hoặc thực tập quốc tế."
+    ],
+    "outcomes": [
+      "Tham gia thảo luận nhóm, trình bày ý kiến & lập luận.",
+      "Xử lý tình huống không lường trước (khách hàng, du lịch, công việc).",
+      "Đọc – tóm tắt thông tin chính từ văn bản dài hơn.",
+      "Viết email/báo cáo ngắn, mạch lạc, có cấu trúc."
+    ],
+    "syllabus": [
+      {
+        "title": "Tuần 1: Who Am I?",
+        "topics": [
+          "Mô tả tính cách & sở thích chi tiết",
+          "Nói về mục tiêu và ước mơ",
+          "Present Perfect vs Past Simple",
+          "Personality adjectives nâng cao"
+        ]
+      },
+      {
+        "title": "Tuần 2: Family & Relationships",
+        "topics": [
+          "Mô tả các mối quan hệ trong gia đình",
+          "Nói về truyền thống gia đình",
+          "Relative clauses (who, which, that)",
+          "Family dynamics vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 3: Life Milestones",
+        "topics": [
+          "Kể về những sự kiện quan trọng",
+          "Mô tả những thay đổi trong cuộc đời",
+          "Past Perfect và time expressions",
+          "Life events và emotions vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 4: Educational Journey",
+        "topics": [
+          "Mô tả quá trình học tập",
+          "So sánh hệ thống giáo dục",
+          "Used to & would cho thói quen quá khứ",
+          "Education vocabulary chuyên sâu"
+        ]
+      },
+      {
+        "title": "Tuần 5: Career Choices",
+        "topics": [
+          "Thảo luận về lựa chọn nghề nghiệp",
+          "Mô tả môi trường làm việc lý tưởng",
+          "Modal verbs cho speculation",
+          "Career & workplace vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 6: Professional Development",
+        "topics": [
+          "Nói về kỹ năng & kinh nghiệm",
+          "Thảo luận về cơ hội phát triển",
+          "Future forms (will, going to, present continuous)",
+          "Skills & qualifications vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 7: Travel Experiences",
+        "topics": [
+          "Kể về những chuyến đi đáng nhớ",
+          "Mô tả các địa điểm du lịch",
+          "Narrative tenses (past simple, past continuous, past perfect)",
+          "Travel & tourism vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 8: Cultural Differences",
+        "topics": [
+          "So sánh văn hóa các quốc gia",
+          "Thảo luận về cultural shock",
+          "Comparative & superlative nâng cao",
+          "Culture & customs vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 9: Planning Adventures",
+        "topics": [
+          "Lập kế hoạch cho chuyến đi",
+          "Giải quyết vấn đề khi du lịch",
+          "Conditionals (first & second conditional)",
+          "Planning & problem-solving vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 10: Physical & Mental Health",
+        "topics": [
+          "Mô tả tình trạng sức khỏe",
+          "Thảo luận về các vấn đề sức khỏe",
+          "Modal verbs cho advice & obligation",
+          "Health & medical vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 11: Healthy Living",
+        "topics": [
+          "Chia sẻ thói quen sống khỏe",
+          "Thảo luận về chế độ ăn & exercise",
+          "Gerunds & infinitives",
+          "Fitness & nutrition vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 12: Life Balance",
+        "topics": [
+          "Nói về work-life balance",
+          "Quản lý stress & thời gian",
+          "Present Perfect Continuous",
+          "Lifestyle & wellbeing vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 13: Digital Revolution",
+        "topics": [
+          "Thảo luận về sự thay đổi của công nghệ",
+          "Tác động của Internet & social media",
+          "Passive voice trong các thì khác nhau",
+          "Technology & digital vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 14: Future Innovations",
+        "topics": [
+          "Dự đoán về tương lai công nghệ",
+          "Thảo luận về AI & automation",
+          "Future Perfect & Future Continuous",
+          "Innovation & prediction vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 15: Digital Ethics",
+        "topics": [
+          "Thảo luận về đạo đức trong công nghệ",
+          "Privacy & security issues",
+          "Third conditional",
+          "Ethics & responsibility vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 16: Environmental Challenges",
+        "topics": [
+          "Mô tả các vấn đề môi trường",
+          "Nguyên nhân & hậu quả",
+          "Cause & effect expressions",
+          "Environment & climate vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 17: Sustainable Solutions",
+        "topics": [
+          "Thảo luận các giải pháp bền vững",
+          "Vai trò cá nhân & tập thể",
+          "Modal verbs cho possibility & necessity",
+          "Sustainability & conservation vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 18: Green Lifestyle",
+        "topics": [
+          "Chia sẻ cách sống xanh",
+          "Đánh giá tác động cá nhân",
+          "Quantifiers & intensifiers",
+          "Green living & eco-friendly vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 19: Social Problems",
+        "topics": [
+          "Thảo luận về bất bình đẳng xã hội",
+          "Phân tích nguyên nhân & giải pháp",
+          "Advanced linking words",
+          "Social issues & inequality vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 20: Global Challenges",
+        "topics": [
+          "Thảo luận về các vấn đề toàn cầu",
+          "Vai trò của hợp tác quốc tế",
+          "Reported speech nâng cao",
+          "Global issues & cooperation vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 21: Making a Difference",
+        "topics": [
+          "Cách tạo ra sự thay đổi tích cực",
+          "Volunteer work & social responsibility",
+          "Subjunctive & formal expressions",
+          "Activism & social change vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 22: Personal Goals",
+        "topics": [
+          "Chia sẻ mục tiêu cá nhân",
+          "Lập kế hoạch để đạt mục tiêu",
+          "Mixed conditionals",
+          "Goals & achievement vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 23: Career Advancement",
+        "topics": [
+          "Strategies for professional growth",
+          "Advanced future forms",
+          "Professional development vocabulary"
+        ]
+      },
+      {
+        "title": "Tuần 24: Life Vision",
+        "topics": [
+          "Mô tả tầm nhìn cuộc sống",
+          "Reflection về hành trình học tập",
+          "Review tất cả grammar points",
+          "Vision & reflection vocabulary"
+        ]
+      }
+    ]
+  }
+}
