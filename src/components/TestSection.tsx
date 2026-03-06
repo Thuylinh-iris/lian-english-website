@@ -72,11 +72,13 @@ export default function TestSection({
               key={index}
               className={`${styles.option} ${
                 answers[currentQuestion] === index ? styles.selected : ""
-              } : 'var(--background: 0.1)'
+              }`}
+              onClick={() => handleAnswerSelect(index)}
             >
               <span className={styles.optionLetter}>
                 {String.fromCharCode(97 + index)}
               </span>
+              {option}
             </button>
           ))}
         </div>
