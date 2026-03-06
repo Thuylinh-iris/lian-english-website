@@ -71,7 +71,7 @@ export default function Home() {
   return (
     <>
       {/* 1. The Professional Hero - Pain Hook First */}
-      <section id="hero" className="section" style={{ paddingTop: '120px', paddingBottom: '80px', background: 'linear-gradient(90deg, rgba(248, 249, 250, 0.95) 0%, rgba(248, 249, 250, 0.8) 50%, rgba(248, 249, 250, 0.2) 100%), url("/cma-images/hero-bg.png") center/cover no-repeat' }}>
+      <section id="hero" className={`section ${styles.heroSection}`}>
         <div className="container">
           <div className={styles.heroContent}>
             <div className={styles.cmaHeroText}>
@@ -84,18 +84,18 @@ export default function Home() {
               </p>
 
               {/* Mini Social Proof */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '30px', flexWrap: 'wrap' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <div className={styles.miniSocialProof}>
+                <div className={styles.miniSocialProofItem}>
                   <CheckCircle2 size={20} style={{ color: '#10b981' }} />
-                  <span style={{ fontSize: '14px', color: 'var(--color-text)' }}>50+ học viên đã tự tin giao tiếp</span>
+                  <span className={styles.miniSocialProofText}>50+ học viên đã tự tin giao tiếp</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div className={styles.miniSocialProofItem}>
                   <CheckCircle2 size={20} style={{ color: '#10b981' }} />
-                  <span style={{ fontSize: '14px', color: 'var(--color-text)' }}>100% giáo viên TESOL</span>
+                  <span className={styles.miniSocialProofText}>100% giáo viên TESOL</span>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <div className={styles.miniSocialProofItem}>
                   <ShieldCheck size={20} style={{ color: '#10b981' }} />
-                  <span style={{ fontSize: '14px', color: 'var(--color-text)' }}>Hoàn tiền 100% trong 2 tuần đầu</span>
+                  <span className={styles.miniSocialProofText}>Hoàn tiền 100% trong 2 tuần đầu</span>
                 </div>
               </div>
 
@@ -113,134 +113,126 @@ export default function Home() {
       </section>
 
       {/* 2. Course Cards - Pain → Solution → Outcome */}
-      <section className="section" id="courses" style={{ paddingTop: '20px' }}>
+      <section className={`section ${styles.coursesSection}`} id="courses">
         <div className="container">
           <div className={styles.cmaSectionHead}>
             <h2 className={styles.textNavy}>Chọn Lộ Trình Phù Hợp Với Bạn</h2>
             <p className={styles.subtitle}>Mỗi cấp độ giải quyết một nút thắt riêng biệt — tìm hiểu xem bạn đang gặp phải nút thắt nào</p>
           </div>
 
-          <div className={styles.cmaGrid3} style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
+          <div className={styles.courseCardsGrid}>
             {/* A1 Card */}
-            <div style={{ background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--color-border)', transition: 'transform 0.3s, box-shadow 0.3s' }}>
-              <div style={{ position: 'relative', height: '200px', width: '100%' }}>
+            <div className={styles.courseCard}>
+              <div className={styles.courseCardImage}>
                 <Image src="/cma-images/a1.png" alt="Lớp A1" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div style={{ padding: '25px' }}>
-                <div style={{ fontSize: '12px', fontWeight: '700', color: 'var(--color-accent)', marginBottom: '8px', letterSpacing: '1px' }}>LỘ TRÌNH A1</div>
-                <h3 style={{ fontSize: '22px', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '15px', lineHeight: '1.3' }}>
+              <div className={styles.courseCardContent}>
+                <div className={styles.courseCardBadge}>LỘ TRÌNH A1</div>
+                <h3 className={styles.courseCardTitle}>
                   Bạn sợ mở miệng vì nghĩ mình "mất gốc"?
                 </h3>
-                <p style={{ color: 'var(--color-text-light)', lineHeight: '1.6', marginBottom: '15px', fontSize: '15px' }}>
+                <p className={styles.courseCardDescription}>
                   Thực ra bạn không mất gốc — bạn chỉ chưa có môi trường an toàn để luyện phản xạ. Lớp A1 giúp bạn xóa bỏ sự e ngại trong 2 tuần đầu, bắt đầu nói từ Ngày 1.
                 </p>
-                <div style={{ marginTop: '15px', paddingTop: '15px', borderTop: '1px solid var(--color-border)' }}>
-                  <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--color-primary)', marginBottom: '8px' }}>
+                <div className={styles.courseCardFooter}>
+                  <p className={styles.courseCardResult}>
                     ✓ Đầu tuần 2 đã tự tin giới thiệu bản thân
                   </p>
-                  <p style={{ fontSize: '13px', color: 'var(--color-text-light)' }}>
+                  <p className={styles.courseCardMeta}>
                     8 tuần | 4-6 học viên/lớp
                   </p>
                 </div>
-                <Link href="/classes/a1" style={{ textDecoration: 'none' }}>
-                  <div style={{ marginTop: '20px', textAlign: 'center', color: 'var(--color-accent)', fontWeight: '600', fontSize: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px' }}>
-                    Tìm hiểu thêm <ArrowRight size={16} />
-                  </div>
+                <Link href="/classes/a1" className={styles.courseCardLink}>
+                  Tìm hiểu thêm <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
 
             {/* A2 Card */}
-            <div style={{ background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--color-border)', transition: 'transform 0.3s, box-shadow 0.3s' }}>
-              <div style={{ position: 'relative', height: '200px', width: '100%' }}>
+            <div className={styles.courseCard}>
+              <div className={styles.courseCardImage}>
                 <Image src="/cma-images/a2.png" alt="Lớp A2" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div style={{ padding: '25px' }}>
-                <div style={{ fontSize: '12px', fontWeight: '700', color: 'var(--color-accent)', marginBottom: '8px', letterSpacing: '1px' }}>LỘ TRÌNH A2</div>
-                <h3 style={{ fontSize: '22px', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '15px', lineHeight: '1.3' }}>
+              <div className={styles.courseCardContent}>
+                <div className={styles.courseCardBadge}>LỘ TRÌNH A2</div>
+                <h3 className={styles.courseCardTitle}>
                   Não bộ "trống rỗng" khi cần nói?
                 </h3>
-                <p style={{ color: 'var(--color-text-light)', lineHeight: '1.6', marginBottom: '15px', fontSize: '15px' }}>
+                <p className={styles.courseCardDescription}>
                   Bạn có thói quen dịch thầm từ tiếng Việt sang tiếng Anh trong đầu? Quá trình này khiến bộ nhớ làm việc quá tải, dẫn đến hiện tượng quên sạch ngay khi cần nói.
                 </p>
-                <div style={{ marginTop: '15px', paddingTop: '15px', borderTop: '1px solid var(--color-border)' }}>
-                  <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--color-primary)', marginBottom: '8px' }}>
+                <div className={styles.courseCardFooter}>
+                  <p className={styles.courseCardResult}>
                     ✓ Ngắt nghỉ đúng, diễn đạt mượt mà không cần dịch thầm
                   </p>
-                  <p style={{ fontSize: '13px', color: 'var(--color-text-light)' }}>
+                  <p className={styles.courseCardMeta}>
                     8 tuần | 4-6 học viên/lớp
                   </p>
                 </div>
-                <Link href="/classes/a2" style={{ textDecoration: 'none' }}>
-                  <div style={{ marginTop: '20px', textAlign: 'center', color: 'var(--color-accent)', fontWeight: '600', fontSize: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px' }}>
-                    Tìm hiểu thêm <ArrowRight size={16} />
-                  </div>
+                <Link href="/classes/a2" className={styles.courseCardLink}>
+                  Tìm hiểu thêm <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
 
             {/* A2+ Card */}
-            <div style={{ background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--color-border)', transition: 'transform 0.3s, box-shadow 0.3s' }}>
-              <div style={{ position: 'relative', height: '200px', width: '100%' }}>
+            <div className={styles.courseCard}>
+              <div className={styles.courseCardImage}>
                 <Image src="/cma-images/a2-plus.png" alt="Lớp A2+" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div style={{ padding: '25px' }}>
-                <div style={{ fontSize: '12px', fontWeight: '700', color: 'var(--color-accent)', marginBottom: '8px', letterSpacing: '1px' }}>LỘ TRÌNH A2+</div>
-                <h3 style={{ fontSize: '22px', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '15px', lineHeight: '1.3' }}>
+              <div className={styles.courseCardContent}>
+                <div className={styles.courseCardBadge}>LỘ TRÌNH A2+</div>
+                <h3 className={styles.courseCardTitle}>
                   Trả lời được, nhưng không kéo dài được câu chuyện?
                 </h3>
-                <p style={{ color: 'var(--color-text-light)', lineHeight: '1.6', marginBottom: '15px', fontSize: '15px' }}>
+                <p className={styles.courseCardDescription}>
                   Bạn có từ vựng, nhưng chưa quen cách duy trì mạch chuyện. Học cách phát triển ý và mở rộng hội thoại từ câu trả lời ngắn thành câu chuyện 2-3 phút.
                 </p>
-                <div style={{ marginTop: '15px', paddingTop: '15px', borderTop: '1px solid var(--color-border)' }}>
-                  <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--color-primary)', marginBottom: '8px' }}>
+                <div className={styles.courseCardFooter}>
+                  <p className={styles.courseCardResult}>
                     ✓ Biến câu trả lời ngắn thành câu chuyện cuốn hút
                   </p>
-                  <p style={{ fontSize: '13px', color: 'var(--color-text-light)' }}>
+                  <p className={styles.courseCardMeta}>
                     8 tuần | 4-6 học viên/lớp
                   </p>
                 </div>
-                <Link href="/classes/a2-plus" style={{ textDecoration: 'none' }}>
-                  <div style={{ marginTop: '20px', textAlign: 'center', color: 'var(--color-accent)', fontWeight: '600', fontSize: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px' }}>
-                    Tìm hiểu thêm <ArrowRight size={16} />
-                  </div>
+                <Link href="/classes/a2-plus" className={styles.courseCardLink}>
+                  Tìm hiểu thêm <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
 
             {/* B1 Card */}
-            <div style={{ background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--color-border)', transition: 'transform 0.3s, box-shadow 0.3s' }}>
-              <div style={{ position: 'relative', height: '200px', width: '100%' }}>
+            <div className={styles.courseCard}>
+              <div className={styles.courseCardImage}>
                 <Image src="/cma-images/b1.png" alt="Lớp B1" fill style={{ objectFit: 'cover' }} />
               </div>
-              <div style={{ padding: '25px' }}>
-                <div style={{ fontSize: '12px', fontWeight: '700', color: 'var(--color-accent)', marginBottom: '8px', letterSpacing: '1px' }}>LỘ TRÌNH B1</div>
-                <h3 style={{ fontSize: '22px', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '15px', lineHeight: '1.3' }}>
+              <div className={styles.courseCardContent}>
+                <div className={styles.courseCardBadge}>LỘ TRÌNH B1</div>
+                <h3 className={styles.courseCardTitle}>
                   Giao tiếp đời thường ổn, nhưng khó thảo luận chuyên sâu?
                 </h3>
-                <p style={{ color: 'var(--color-text-light)', lineHeight: '1.6', marginBottom: '15px', fontSize: '15px' }}>
+                <p className={styles.courseCardDescription}>
                   Bạn lúng túng khi cần giải thích "TẠI SAO" (reasoning) và bảo vệ quan điểm. Xây dựng tư duy phản biện và lập luận có chiều sâu.
                 </p>
-                <div style={{ marginTop: '15px', paddingTop: '15px', borderTop: '1px solid var(--color-border)' }}>
-                  <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--color-primary)', marginBottom: '8px' }}>
+                <div className={styles.courseCardFooter}>
+                  <p className={styles.courseCardResult}>
                     ✓ Thảo luận, bảo vệ quan điểm tự tin, tự học trọn đời
                   </p>
-                  <p style={{ fontSize: '13px', color: 'var(--color-text-light)' }}>
+                  <p className={styles.courseCardMeta}>
                     8 tuần | 4-6 học viên/lớp
                   </p>
                 </div>
-                <Link href="/classes/b1" style={{ textDecoration: 'none' }}>
-                  <div style={{ marginTop: '20px', textAlign: 'center', color: 'var(--color-accent)', fontWeight: '600', fontSize: '14px', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '5px' }}>
-                    Tìm hiểu thêm <ArrowRight size={16} />
-                  </div>
+                <Link href="/classes/b1" className={styles.courseCardLink}>
+                  Tìm hiểu thêm <ArrowRight size={16} />
                 </Link>
               </div>
             </div>
           </div>
 
           {/* CTA after courses */}
-          <div style={{ textAlign: 'center', marginTop: '40px' }}>
-            <p style={{ color: 'var(--color-text-light)', marginBottom: '20px', fontSize: '16px' }}>
+          <div className={styles.simpleCta}>
+            <p className={styles.simpleCtaText}>
               Không chắc mình thuộc cấp độ nào?
             </p>
             <Button href="/test" className={styles.primaryBtn}>
@@ -333,7 +325,7 @@ export default function Home() {
       </section>
 
       {/* 4. "Phản Xạ Bài Bản" Visual Explanation - NEW SECTION */}
-      <section className="section section-alt" id="methodology-explanation" style={{ paddingTop: '80px', paddingBottom: '80px' }}>
+      <section className={`section section-alt ${styles.methodologySection}`} id="methodology-explanation">
         <div className="container">
           <div className={styles.cmaSectionHead}>
             <h2 className={styles.textNavy}>Phản Xạ Bài Bản là gì?</h2>
@@ -341,44 +333,44 @@ export default function Home() {
           </div>
 
           {/* Visual Process */}
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '30px', marginBottom: '60px', flexWrap: 'wrap' }}>
+          <div className={styles.methodologyVisual}>
             {/* Step 1: Reflex */}
-            <div style={{ textAlign: 'center', maxWidth: '250px' }}>
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'linear-gradient(135deg, #B8860B 0%, #D4A84B 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', boxShadow: '0 10px 30px rgba(184, 134, 11, 0.3)' }}>
+            <div className={styles.methodologyStep}>
+              <div className={`${styles.methodologyIconWrapper} ${styles.methodologyIconGold}`}>
                 <Zap size={50} style={{ color: 'white' }} />
               </div>
-              <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--color-primary)', marginBottom: '10px' }}>Phản Xạ</h3>
-              <p style={{ fontSize: '14px', color: 'var(--color-text-light)', lineHeight: '1.6' }}>
+              <h3 className={styles.methodologyStepTitle}>Phản Xạ</h3>
+              <p className={styles.methodologyStepText}>
                 Tự nhiên như trẻ em học nói<br />
                 Mở miệng ngay, không đợi hoàn hảo
               </p>
             </div>
 
             {/* Arrow */}
-            <div style={{ fontSize: '32px', color: 'var(--color-accent)' }}>→</div>
+            <span className={styles.methodologyArrow}>→</span>
 
             {/* Step 2: Structure */}
-            <div style={{ textAlign: 'center', maxWidth: '250px' }}>
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'linear-gradient(135deg, #0F2039 0%, #1a3055 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', boxShadow: '0 10px 30px rgba(15, 32, 57, 0.3)' }}>
+            <div className={styles.methodologyStep}>
+              <div className={`${styles.methodologyIconWrapper} ${styles.methodologyIconNavy}`}>
                 <CheckCircle2 size={50} style={{ color: 'white' }} />
               </div>
-              <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--color-primary)', marginBottom: '10px' }}>Bài Bản</h3>
-              <p style={{ fontSize: '14px', color: 'var(--color-text-light)', lineHeight: '1.6' }}>
+              <h3 className={styles.methodologyStepTitle}>Bài Bản</h3>
+              <p className={styles.methodologyStepText}>
                 Logic như người trưởng thành<br />
                 Khung mẫu câu rõ ràng
               </p>
             </div>
 
             {/* Arrow */}
-            <div style={{ fontSize: '32px', color: 'var(--color-accent)' }}>→</div>
+            <span className={styles.methodologyArrow}>→</span>
 
             {/* Step 3: Freedom */}
-            <div style={{ textAlign: 'center', maxWidth: '250px' }}>
-              <div style={{ width: '120px', height: '120px', borderRadius: '50%', background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', boxShadow: '0 10px 30px rgba(16, 185, 129, 0.3)' }}>
+            <div className={styles.methodologyStep}>
+              <div className={`${styles.methodologyIconWrapper} ${styles.methodologyIconGreen}`}>
                 <ArrowRight size={50} style={{ color: 'white' }} />
               </div>
-              <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'var(--color-primary)', marginBottom: '10px' }}>Tự Do</h3>
-              <p style={{ fontSize: '14px', color: 'var(--color-text-light)', lineHeight: '1.6' }}>
+              <h3 className={styles.methodologyStepTitle}>Tự Do</h3>
+              <p className={styles.methodologyStepText}>
                 Nói tự tin, đúng ngữ cảnh<br />
                 Tự học trọn đời
               </p>
@@ -386,69 +378,69 @@ export default function Home() {
           </div>
 
           {/* Comparison Table */}
-          <div style={{ maxWidth: '900px', margin: '0 auto', background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-md)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0' }}>
+          <div className={styles.comparisonTable}>
+            <div className={styles.comparisonTableGrid}>
               {/* Traditional Method */}
-              <div style={{ background: '#fef2f2', padding: '30px', borderRight: '1px solid var(--color-border)' }}>
-                <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#991b1b', marginBottom: '20px', textAlign: 'center' }}>
+              <div className={`${styles.comparisonColumn} ${styles.comparisonColumnTraditional}`}>
+                <h3 className={`${styles.comparisonTitle} ${styles.comparisonTitleBad}`}>
                   ❌ Cách truyền thống
                 </h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '15px' }}>
-                    <span style={{ color: '#dc2626', fontSize: '18px' }}>•</span>
-                    <span style={{ fontSize: '15px', color: 'var(--color-text)', lineHeight: '1.5' }}>Học từ vựng rời rạc, ghép câu thủ công</span>
+                <ul className={styles.comparisonList}>
+                  <li className={styles.comparisonListItem}>
+                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletBad}`}>•</span>
+                    <span className={styles.comparisonText}>Học từ vựng rời rạc, ghép câu thủ công</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '15px' }}>
-                    <span style={{ color: '#dc2626', fontSize: '18px' }}>•</span>
-                    <span style={{ fontSize: '15px', color: 'var(--color-text)', lineHeight: '1.5' }}>Dịch thầm từ tiếng Việt sang tiếng Anh</span>
+                  <li className={styles.comparisonListItem}>
+                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletBad}`}>•</span>
+                    <span className={styles.comparisonText}>Dịch thầm từ tiếng Việt sang tiếng Anh</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '15px' }}>
-                    <span style={{ color: '#dc2626', fontSize: '18px' }}>•</span>
-                    <span style={{ fontSize: '15px', color: 'var(--color-text)', lineHeight: '1.5' }}>Đợi học xong ngữ pháp mới dám nói</span>
+                  <li className={styles.comparisonListItem}>
+                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletBad}`}>•</span>
+                    <span className={styles.comparisonText}>Đợi học xong ngữ pháp mới dám nói</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                    <span style={{ color: '#dc2626', fontSize: '18px' }}>•</span>
-                    <span style={{ fontSize: '15px', color: 'var(--color-text)', lineHeight: '1.5' }}>Lớp đông, ngại sai, không được sửa nhiều</span>
+                  <li className={styles.comparisonListItem}>
+                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletBad}`}>•</span>
+                    <span className={styles.comparisonText}>Lớp đông, ngại sai, không được sửa nhiều</span>
                   </li>
                 </ul>
               </div>
 
               {/* Our Method */}
-              <div style={{ background: '#f0fdf4', padding: '30px' }}>
-                <h3 style={{ fontSize: '18px', fontWeight: '700', color: '#166534', marginBottom: '20px', textAlign: 'center' }}>
+              <div className={`${styles.comparisonColumn} ${styles.comparisonColumnOur}`}>
+                <h3 className={`${styles.comparisonTitle} ${styles.comparisonTitleGood}`}>
                   ✅ Phản Xạ Bài Bản
                 </h3>
-                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '15px' }}>
-                    <span style={{ color: '#16a34a', fontSize: '18px' }}>✓</span>
-                    <span style={{ fontSize: '15px', color: 'var(--color-text)', lineHeight: '1.5' }}>Học chunks & patterns, lắp ráp linh hoạt</span>
+                <ul className={styles.comparisonList}>
+                  <li className={styles.comparisonListItem}>
+                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletGood}`}>✓</span>
+                    <span className={styles.comparisonText}>Học chunks & patterns, lắp ráp linh hoạt</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '15px' }}>
-                    <span style={{ color: '#16a34a', fontSize: '18px' }}>✓</span>
-                    <span style={{ fontSize: '15px', color: 'var(--color-text)', lineHeight: '1.5' }}>Tư duy trực tiếp bằng tiếng Anh</span>
+                  <li className={styles.comparisonListItem}>
+                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletGood}`}>✓</span>
+                    <span className={styles.comparisonText}>Tư duy trực tiếp bằng tiếng Anh</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', marginBottom: '15px' }}>
-                    <span style={{ color: '#16a34a', fontSize: '18px' }}>✓</span>
-                    <span style={{ fontSize: '15px', color: 'var(--color-text)', lineHeight: '1.5' }}>Nói từ Ngày 1, hoàn thiện dần dần</span>
+                  <li className={styles.comparisonListItem}>
+                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletGood}`}>✓</span>
+                    <span className={styles.comparisonText}>Nói từ Ngày 1, hoàn thiện dần dần</span>
                   </li>
-                  <li style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                    <span style={{ color: '#16a34a', fontSize: '18px' }}>✓</span>
-                    <span style={{ fontSize: '15px', color: 'var(--color-text)', lineHeight: '1.5' }}>Lớp siêu nhỏ 4-6 người, sửa từng lỗi</span>
+                  <li className={styles.comparisonListItem}>
+                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletGood}`}>✓</span>
+                    <span className={styles.comparisonText}>Lớp siêu nhỏ 4-6 người, sửa từng lỗi</span>
                   </li>
                 </ul>
               </div>
             </div>
 
             {/* Result */}
-            <div style={{ background: 'var(--color-primary)', padding: '20px', textAlign: 'center' }}>
-              <p style={{ color: 'white', fontSize: '16px', fontWeight: '600', margin: 0 }}>
+            <div className={styles.comparisonResult}>
+              <p className={styles.comparisonResultText}>
                 Kết quả: Bạn sẽ nói tự nhiên, đúng cấu trúc, không cần dịch thầm
               </p>
             </div>
           </div>
 
           {/* CTA */}
-          <div style={{ textAlign: 'center', marginTop: '40px' }}>
+          <div className={styles.simpleCta}>
             <Button href="/test" className={styles.primaryBtn}>
               Kiểm Tra Trình Độ Miễn Phí
             </Button>
@@ -495,20 +487,20 @@ export default function Home() {
         </div>
       </section>
       {/* CTA Section - Take the Test */}
-      <section className="section" id="cta-test" style={{ background: 'linear-gradient(135deg, #0F2039 0%, #1a3055 100%)' }}>
+      <section className={`section ${styles.testCtaSection}`} id="cta-test">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: '800', color: 'white', marginBottom: '20px', lineHeight: '1.2' }}>
+          <div className={styles.testCtaContent}>
+            <h2 className={styles.testCtaTitle}>
               Kiểm Tra Trình Độ Của Bạn
             </h2>
-            <p style={{ fontSize: '18px', color: 'rgba(255, 255, 255, 0.85)', marginBottom: '30px', lineHeight: '1.6' }}>
+            <p className={styles.testCtaDescription}>
               80 câu hỏi, khoảng 60 phút. Nhận kết quả ngay và lộ trình học phù hợp nhất với bạn. Hoàn toàn miễn phí.
             </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center' }}>
-              <Button href="/test" className={styles.primaryBtn} style={{ background: '#B8860B', border: 'none', fontSize: '18px', padding: '15px 40px' }}>
+            <div className={styles.testCtaButtons}>
+              <Button href="/test" className={`${styles.primaryBtn} ${styles.testCtaPrimaryBtn}`}>
                 Bắt Đầu Bài Test Miễn Phí
               </Button>
-              <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>
+              <p className={styles.testCtaNote}>
                 Đăng ký sau khi hoàn thành test
               </p>
             </div>
@@ -541,41 +533,41 @@ export default function Home() {
       </section>
 
       {/* URGENCY SECTION - March 26 Deadline */}
-      <section className="section" style={{ background: 'linear-gradient(135deg, #0F2039 0%, #1a3055 100%)', paddingTop: '80px', paddingBottom: '80px' }}>
+      <section className={`section ${styles.urgencySection}`}>
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-            <div style={{ display: 'inline-block', background: 'rgba(184, 134, 11, 0.2)', padding: '8px 20px', borderRadius: '50px', marginBottom: '20px' }}>
-              <span style={{ color: '#B8860B', fontWeight: '700', fontSize: '14px', letterSpacing: '1px' }}>KHAI GIẢNG SẮP TỚI</span>
+          <div className={styles.urgencyContent}>
+            <div className={styles.urgencyBadge}>
+              <span className={styles.urgencyBadgeText}>KHAI GIẢNG SẮP TỚI</span>
             </div>
-            <h2 style={{ fontSize: 'clamp(32px, 5vw, 48px)', fontWeight: '800', color: 'white', marginBottom: '20px', lineHeight: '1.2' }}>
+            <h2 className={styles.urgencyTitle}>
               Lớp A1 khai giảng ngày 26/03/2026
             </h2>
-            <p style={{ fontSize: '20px', color: '#B8860B', fontWeight: '600', marginBottom: '40px' }}>
+            <p className={styles.urgencySubtitle}>
               Chỉ còn 22 ngày. 4-6 học viên mỗi lớp. Số chỗ có hạn.
             </p>
 
             {/* Benefits List */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '20px', marginBottom: '40px', textAlign: 'left' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+            <div className={styles.urgencyBenefits}>
+              <div className={styles.urgencyBenefit}>
                 <CheckCircle2 size={24} style={{ color: '#10b981', flexShrink: 0 }} />
-                <span style={{ color: 'white', fontSize: '16px' }}>8 tuần từ A1 đến tự tin giao tiếp cơ bản</span>
+                <span className={styles.urgencyBenefitText}>8 tuần từ A1 đến tự tin giao tiếp cơ bản</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+              <div className={styles.urgencyBenefit}>
                 <CheckCircle2 size={24} style={{ color: '#10b981', flexShrink: 0 }} />
-                <span style={{ color: 'white', fontSize: '16px' }}>Lớp siêu nhỏ 4-6 người</span>
+                <span className={styles.urgencyBenefitText}>Lớp siêu nhỏ 4-6 người</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+              <div className={styles.urgencyBenefit}>
                 <CheckCircle2 size={24} style={{ color: '#10b981', flexShrink: 0 }} />
-                <span style={{ color: 'white', fontSize: '16px' }}>100% giáo viên TESOL quốc tế</span>
+                <span className={styles.urgencyBenefitText}>100% giáo viên TESOL quốc tế</span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+              <div className={styles.urgencyBenefit}>
                 <CheckCircle2 size={24} style={{ color: '#10b981', flexShrink: 0 }} />
-                <span style={{ color: 'white', fontSize: '16px' }}>Hoàn tiền 100% trong 2 tuần đầu nếu không phù hợp</span>
+                <span className={styles.urgencyBenefitText}>Hoàn tiền 100% trong 2 tuần đầu nếu không phù hợp</span>
               </div>
             </div>
 
             {/* CTA Button */}
-            <Button href="/test" className={styles.primaryBtn} style={{ background: '#B8860B', border: 'none', fontSize: '18px', padding: '15px 40px' }}>
+            <Button href="/test" className={`${styles.primaryBtn} ${styles.urgencyCta}`}>
               Đăng Ký Ngay (Miễn Phí Test Trình Độ)
             </Button>
           </div>
@@ -583,56 +575,56 @@ export default function Home() {
       </section>
 
       {/* Final CTA with Risk Reversal + Contact */}
-      <section className="section" id="final-cta" style={{ paddingTop: '80px', paddingBottom: '80px', background: '#F8F9FA' }}>
+      <section className={`section ${styles.finalCtaSection}`} id="final-cta">
         <div className="container">
-          <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
-            <h2 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '20px', lineHeight: '1.2' }}>
+          <div className={styles.finalCtaContent}>
+            <h2 className={styles.finalCtaTitle}>
               Bạn đã sẵn sàng nói tiếng Anh tự tin?
             </h2>
-            <p style={{ fontSize: '18px', color: 'var(--color-text-light)', marginBottom: '40px', lineHeight: '1.6' }}>
+            <p className={styles.finalCtaSubtitle}>
               Hãy để Lian giúp bạn tháo gỡ rào cản tâm lý và xây dựng phản xạ tự nhiên.<br />
               Lớp A1 khai giảng ngày 26/03 — chỉ còn vài chỗ.
             </p>
 
             {/* CTA Buttons */}
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', marginBottom: '40px' }}>
-              <Button href="/test" className={styles.primaryBtn} style={{ fontSize: '18px', padding: '15px 40px' }}>
+            <div className={styles.finalCtaButtons}>
+              <Button href="/test" className={styles.primaryBtn}>
                 Kiểm Tra Trình Độ Miễn Phí
               </Button>
-              <p style={{ color: 'var(--color-text-light)', fontSize: '14px' }}>
+              <p className={styles.finalCtaNote}>
                 hoặc liên hệ trực tiếp
               </p>
             </div>
 
             {/* Contact Options */}
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap', marginBottom: '40px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: '#1877F2', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div className={styles.finalCtaContacts}>
+              <div className={styles.contactItem}>
+                <div className={`${styles.contactIcon} ${styles.contactIconFacebook}`}>
                   <span style={{ color: 'white', fontSize: '20px' }}>📘</span>
                 </div>
-                <div style={{ textAlign: 'left' }}>
-                  <p style={{ fontSize: '12px', color: 'var(--color-text-light)', margin: 0 }}>Facebook</p>
-                  <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--color-primary)', margin: 0 }}>Lian English</p>
+                <div className={styles.contactInfo}>
+                  <p className={styles.contactLabel}>Facebook</p>
+                  <p className={styles.contactValue}>Lian English</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <div style={{ width: '40px', height: '40px', borderRadius: '50%', background: 'var(--color-primary)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <div className={styles.contactItem}>
+                <div className={`${styles.contactIcon} ${styles.contactIconEmail}`}>
                   <span style={{ color: 'white', fontSize: '20px' }}>✉️</span>
                 </div>
-                <div style={{ textAlign: 'left' }}>
-                  <p style={{ fontSize: '12px', color: 'var(--color-text-light)', margin: 0 }}>Email</p>
-                  <p style={{ fontSize: '14px', fontWeight: '600', color: 'var(--color-primary)', margin: 0 }}>fluencybeyondtests@gmail.com</p>
+                <div className={styles.contactInfo}>
+                  <p className={styles.contactLabel}>Email</p>
+                  <p className={styles.contactValue}>fluencybeyondtests@gmail.com</p>
                 </div>
               </div>
             </div>
 
             {/* Risk Reversal */}
-            <div style={{ background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)', padding: '30px', borderRadius: 'var(--radius-lg)', boxShadow: '0 10px 30px rgba(16, 185, 129, 0.2)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '15px' }}>
+            <div className={styles.riskReversal}>
+              <div className={styles.riskReversalContent}>
                 <ShieldCheck size={48} style={{ color: 'white', flexShrink: 0 }} />
-                <div style={{ textAlign: 'left' }}>
-                  <h3 style={{ fontSize: '20px', fontWeight: '700', color: 'white', margin: '0 0 5px 0' }}>💯 CAM KẾT HOÀN TIỀN 100%</h3>
-                  <p style={{ fontSize: '16px', color: 'rgba(255, 255, 255, 0.9)', margin: 0 }}>Nếu bạn cảm thấy phương pháp không phù hợp trong 2 tuần đầu, chúng tôi hoàn tiền toàn bộ. Không câu hỏi.</p>
+                <div>
+                  <h3 className={styles.riskReversalTitle}>💯 CAM KẾT HOÀN TIỀN 100%</h3>
+                  <p className={styles.riskReversalText}>Nếu bạn cảm thấy phương pháp không phù hợp trong 2 tuần đầu, chúng tôi hoàn tiền toàn bộ. Không câu hỏi.</p>
                 </div>
               </div>
             </div>
