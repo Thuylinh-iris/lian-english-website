@@ -25,7 +25,7 @@ export default function Footer() {
                         Hành trình xây dựng nền tảng tiếng Anh vững chắc từ A1 tới B1. Học thực chất, dùng thực tế!
                     </p>
                     <div className={styles.socialLinks}>
-                        <a href="https://www.facebook.com/lianenglish" target="_blank" rel="noreferrer" aria-label="Facebook">
+                        <a href="https://www.facebook.com/Lianenglish.fluencybeyondtests" target="_blank" rel="noreferrer" aria-label="Facebook">
                             <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                                 <path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
                             </svg>
@@ -56,7 +56,7 @@ export default function Footer() {
                     <h4 className={styles.footerTitle}>Liên Hệ</h4>
                     <p>
                         <MessageCircle size={18} className={styles.footerIcon} />
-                        <a href="https://m.me/lianenglish" target="_blank" rel="noreferrer">Facebook Messenger</a>
+                        <a href="https://m.me/Lianenglish.fluencybeyondtests" target="_blank" rel="noreferrer">Facebook Messenger</a>
                     </p>
                     <p>
                         <Mail size={18} className={styles.footerIcon} />

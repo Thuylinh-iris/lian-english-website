@@ -229,7 +229,7 @@ export default function ResultsPage() {
             ✉️ Email Us
           </a>
           <a
-            href="https://www.facebook.com/LianEnglish"
+            href="https://www.facebook.com/Lianenglish.fluencybeyondtests"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.facebookButton}
