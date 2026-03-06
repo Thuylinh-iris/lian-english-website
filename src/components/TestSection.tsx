@@ -96,7 +96,8 @@ export default function TestSection({
           {currentQuestion === questions.length - 1
             ? "Next Section →"
             : "Next →"
-        </button>
+        }
+      </button>
       </div>
 
       <div className={styles.progressIndicator}>
