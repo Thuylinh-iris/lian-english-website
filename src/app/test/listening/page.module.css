@@ -1,114 +1,174 @@
+/* Test Page - Compact Design with Brand Colors */
+
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 30px 20px;
   min-height: 100vh;
-  background: #F8F9FA;
+  background: #0F2039;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .header h1 {
-  font-size: 2rem;
-  color: #0F2039;
-  margin-bottom: 10px;
+  font-size: 1.75rem;
+  color: #B8860B;
+  margin-bottom: 8px;
   font-weight: 700;
 }
 
 .progress {
-  font-size: 1rem;
-  color: #5A6C7D;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .audioSection {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(184, 134, 11, 0.3);
 }
 
 .audioSection h3 {
-  font-size: 1.3rem;
-  color: #0F2039;
-  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: #B8860B;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .audioSection p {
-  color: #5A6C7D;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
 }
 
 .audioPlayer {
   width: 100%;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .audioNote {
-  margin-top: 15px;
-  padding: 12px;
-  background: #FFF8E1;
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(184, 134, 11, 0.15);
   border-radius: 6px;
-  font-size: 0.9rem;
-  color: #F57C00;
+  font-size: 0.85rem;
+  color: #B8860B;
+  border-left: 3px solid #B8860B;
 }
 
+/* Progress Indicator - Sticky */
+.progressIndicator {
+  position: sticky;
+  top: 0;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  z-index: 10;
+}
+
+.progressBar {
+  height: 100%;
+  background: #B8860B;
+  transition: width 0.3s ease;
+}
+
+/* Questions List - Scrollable */
+.questionsList {
+  max-height: 65vh;
+  overflow-y: auto;
+  padding-right: 8px;
+  margin-bottom: 20px;
+}
+
+.questionsList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.questionsList::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.questionsList::-webkit-scrollbar-thumb {
+  background: #B8860B;
+  border-radius: 3px;
+}
+
+.questionsList::-webkit-scrollbar-thumb:hover {
+  background: #9a7209;
+}
+
+/* Question Card - Compact */
 .questionCard {
-  background: white;
-  padding: 40px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(184, 134, 11, 0.2);
+}
+
+.questionCard:last-child {
+  margin-bottom: 0;
 }
 
 .questionNumber {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #B8860B;
   font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(184, 134, 11, 0.15);
+  border-radius: 4px;
 }
 
 .questionText {
-  font-size: 1.3rem;
-  color: #0F2039;
-  margin-bottom: 30px;
-  line-height: 1.6;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 15px;
+  line-height: 1.5;
   font-weight: 500;
 }
 
+/* Options - 2-column grid on desktop */
 .options {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .option {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 18px 20px;
-  background: #F8F9FA;
-  border: 2px solid transparent;
-  border-radius: 8px;
+  gap: 10px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1rem;
-  color: #0F2039;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  color: white;
   text-align: left;
 }
 
 .option:hover {
-  background: #E3F2FD;
+  background: rgba(184, 134, 11, 0.15);
   border-color: #B8860B;
 }
 
 .option.selected {
-  background: #E3F2FD;
+  background: rgba(184, 134, 11, 0.2);
   border-color: #B8860B;
   font-weight: 600;
 }
@@ -117,139 +177,114 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  background: #0F2039;
+  width: 26px;
+  height: 26px;
+  background: #B8860B;
   color: white;
   border-radius: 50%;
   font-weight: 600;
   flex-shrink: 0;
+  font-size: 0.85rem;
 }
 
+/* Navigation */
 .navigation {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-top: 20px;
 }
 
 .navButton {
-  flex: 1;
-  padding: 16px;
+  padding: 14px 30px;
   background: #B8860B;
   color: white;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 .navButton:hover:not(:disabled) {
   background: #9a7209;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
 }
 
 .navButton:disabled {
-  background: #ccc;
+  background: rgba(184, 134, 11, 0.3);
   cursor: not-allowed;
 }
 
-.progressIndicator {
-  height: 6px;
-  background: #E0E0E0;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.progressBar {
-  height: 100%;
-  background: linear-gradient(90deg, #B8860B 0%, #D4A017 100%);
-  transition: width 0.3s ease;
-}
-
+/* Reading Text Section */
 .readingText {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  max-height: 400px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(184, 134, 11, 0.2);
+  max-height: 300px;
   overflow-y: auto;
   text-align: left;
 }
 
 .readingText h3 {
-  color: #0F2039;
-  font-size: 1.2rem;
-  margin-bottom: 15px;
+  color: #B8860B;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
   font-weight: 700;
 }
 
 .readingText p {
-  color: #5A6C7D;
-  line-height: 1.7;
-  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
-/* Questions List - Scrollable multiple questions */
-.questionsList {
-  max-height: 60vh;
-  overflow-y: auto;
-  padding-right: 10px;
-  margin-bottom: 20px;
-}
-
-.questionsList::-webkit-scrollbar {
-  width: 8px;
-}
-
-.questionsList::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 4px;
-}
-
-.questionsList::-webkit-scrollbar-thumb {
-  background: #B8860B;
-  border-radius: 4px;
-}
-
-.questionsList::-webkit-scrollbar-thumb:hover {
-  background: #9a7209;
-}
-
-.questionsList .questionCard {
-  margin-bottom: 25px;
-}
-
-.questionsList .questionCard:last-child {
-  margin-bottom: 0;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .questionsList {
-    max-height: 70vh;
-    padding-right: 5px;
-  }
-}
-
-/* Responsive */
+/* Responsive - Mobile */
 @media (max-width: 768px) {
   .container {
-    padding: 20px;
+    padding: 20px 15px;
+  }
+
+  .header h1 {
+    font-size: 1.5rem;
   }
 
   .questionCard {
-    padding: 25px;
+    padding: 15px;
   }
 
   .questionText {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+  }
+
+  .options {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .option {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .optionLetter {
+    width: 24px;
+    height: 24px;
+    font-size: 0.8rem;
   }
 
   .navigation {
     flex-direction: column;
+  }
+
+  .navButton {
+    width: 100%;
+  }
+
+  .questionsList {
+    max-height: 70vh;
   }
 }

@@ -34,9 +34,9 @@ export default function VocabularySection() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Section 3: Vocabulary</h1>
+        <h1>Phần 3: Từ vựng</h1>
         <div className={styles.progress}>
-          Answered {answeredCount} of {questions.length} questions
+          Đã trả lời {answeredCount} / {questions.length} câu
         </div>
       </div>
 
@@ -53,7 +53,7 @@ export default function VocabularySection() {
         {questions.map((question, questionIndex) => (
           <div key={questionIndex} className={styles.questionCard}>
             <div className={styles.questionNumber}>
-              Question {questionIndex + 1}
+              Câu {questionIndex + 1}
             </div>
             <div className={styles.questionText}>
               {question.question}
@@ -69,7 +69,7 @@ export default function VocabularySection() {
                   onClick={() => handleAnswerSelect(questionIndex, optionIndex)}
                 >
                   <span className={styles.optionLetter}>
-                    {String.fromCharCode(97 + optionIndex)}
+                    {String.fromCharCode(65 + optionIndex)}
                   </span>
                   {option}
                 </button>
@@ -81,7 +81,7 @@ export default function VocabularySection() {
 
       <div className={styles.navigation}>
         <button className={styles.navButton} onClick={handleNextSection}>
-          Next Section → Reading
+          Phần tiếp theo → Đọc hiểu
         </button>
       </div>
     </div>

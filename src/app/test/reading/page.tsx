@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import styles from "../listening/page.module.css";
 import { test1Questions } from "@/data/testQuestions";
+import { BookOpen } from "lucide-react";
 
 export default function ReadingSection() {
   const router = useRouter();
   const [answers, setAnswers] = useState<number[]>(Array(10).fill(-1));
-  const [selectedText, setSelectedText] = useState(0);
 
   const questions = test1Questions.reading;
 
@@ -34,37 +34,37 @@ export default function ReadingSection() {
   const getReadingText = (questionId: number) => {
     if (questionId >= 71 && questionId <= 73) {
       return {
-        title: "Parking Notice",
-        text: `From: Parking office
-To: All workers in building 45
+        title: "Thông báo về bãi đậu xe",
+        text: `Từ: Văn phòng bãi đậu xe
+Đến: Tất cả nhân viên tòa nhà 45
 
-Starting tomorrow, the office car park will close for two weeks. We need to fix the car park floor. We will also draw new lines to add twenty more parking spaces.
+Bắt đầu từ ngày mai, bãi đậu xe của văn phòng sẽ đóng cửa trong hai tuần. Chúng tôi cần sửa sàn bãi đậu xe. Chúng tôi cũng sẽ vẽ các đường kẻ mới để thêm hai mươi chỗ đậu xe.
 
-For the next two weeks, you can park your car in the car park on the corner of High and 1st Street. It is the car park next to the Crowne Plaza Hotel. Show your company ID card, and you can park for free.
+Trong hai tuần tới, bạn có thể đậu xe ở bãi đậu xe trên góc đường High và phố 1. Đó là bãi đậu xe bên cạnh khách sạn Crowne Plaza. Cho nhân viên ID của công ty, và bạn có thể đậu xe miễn phí.
 
-You can also park on High Street from 9 am to 5 pm. But please remember, you cannot park on 1st Street. If you have any questions, please call the parking office at 020-9809-9090.`
+Bạn cũng có thể đậu xe trên đường High từ 9 giờ sáng đến 5 giờ chiều. Nhưng xin hãy nhớ, bạn không thể đậu xe trên phố 1. Nếu bạn có bất kỳ câu hỏi nào, vui lòng gọi cho văn phòng bãi đậu xe theo số 020-9809-9090.`
       };
     } else if (questionId >= 74 && questionId <= 76) {
       return {
-        title: "Cornwall Travel Guide",
-        text: `I have lived and worked in Cornwall for most of my life. It is a very special place, and I am lucky to have spent most of my life in this beautiful area. I enjoy sharing with you my favourite places to go in Cornwall. My goal with this website is to give you helpful information about our community.
+        title: "Hướng dẫn du lịch Cornwall",
+        text: `Tôi đã sống và làm việc ở Cornwall phần lớn cuộc đời. Đây là một nơi rất đặc biệt, và tôi may mắn khi được dành phần lớn cuộc đời mình ở vùng đất xinh đẹp này. Tôi thích chia sẻ với bạn những nơi yêu thích của tôi ở Cornwall. Mục tiêu của tôi với trang web này là cung cấp cho bạn thông tin hữu ích về cộng đồng của chúng tôi.
 
-MUSEUMS: There are more than 70 museums in Cornwall. This page gives you a list of all the museums, their addresses, phone numbers, the times they open and close, and ticket prices.
+BẢO TÀNG: Có hơn 70 bảo tàng ở Cornwall. Trang này cung cấp cho bạn danh sách tất cả các bảo tàng, địa chỉ, số điện thoại, giờ mở và đóng cửa, và giá vé.
 
-SLEEP: You can find a list of all the hotels in the area on this page. There is also a list of private houses to rent. You can look through all the listings and make reservations directly on this page.
+CHỖ NGỦ: Bạn có thể tìm thấy danh sách tất cả các khách sạn trong khu vực trên trang này. Ngoài ra còn có danh sách các nhà riêng để thuê. Bạn có thể xem qua tất cả các danh sách và đặt phòng trực tiếp trên trang này.
 
-SWIM: This page includes information about all the beaches in the area. Most beaches are great for swimming, but some are dangerous — so read the rules on this page carefully. You can also find information about parking, food, and activities here.
+BỜ BIỂN: Trang này bao gồm thông tin về tất cả các bãi biển trong khu vực. Hầu hết các bãi biển đều rất tốt để bơi, nhưng một số nguy hiểm - vì vậy hãy đọc các quy tắc trên trang này cẩn thận. Bạn cũng có thể tìm thông tin về bãi đậu xe, thức ăn và các hoạt động tại đây.
 
-I invite you to check back often as I share new information for the season. I hope you have a wonderful time during your visit to Cornwall.`
+Tôi mời bạn kiểm tra thường xuyên vì tôi chia sẻ thông tin mới cho mùa này. Tôi hy vọng bạn sẽ có khoảng thời gian tuyệt vời trong chuyến thăm Cornwall của mình.`
       };
     } else {
       return {
-        title: "The Wright Brothers",
-        text: `Wilbur and Orville Wright were the American inventors of the first aeroplane. Wilbur was the older of the two brothers, and they always had a close relationship. Their father, Milton Wright, often travelled for work, and he liked to bring back small toys for his children. When Wilbur was 11 years old, Milton brought a model aeroplane for his boys. The plane was made of wood and paper, and the brothers loved playing with it.
+        title: "Anh em nhà Wright",
+        text: `Wilbur và Orville Wright là những nhà phát minh người Mỹ về chiếc máy bay đầu tiên. Wilbur là anh cả trong hai anh em, và họ luôn có mối quan hệ thân thiết. Cha của họ, Milton Wright, thường đi công tác, và ông thích mang về những món đồ chơi nhỏ cho các con mình. Khi Wilbur 11 tuổi, Milton đã mang về một chiếc máy bay mô hình cho các con trai. Chiếc máy bay được làm bằng gỗ và giấy, và hai anh em rất thích chơi với nó.
 
-As adults, Wilbur and Orville continued to be interested in mechanics and the technology behind how things work. In the 1890s, bicycles became popular in the country. The brothers were good at fixing bicycles and began selling their own designs. They also studied the work of German flyer Otto Lilienthal. But when Lilienthal died in a flying accident, the brothers decided to start their own experiments with flying. They studied birds and how they used their wings to control their flying. They used a similar idea to invent their first plane, and on 17 December 1903, they succeeded. They flew the plane in the air for 59 seconds.
+Khi trưởng thành, Wilbur và Orville tiếp tục quan tâm đến cơ học và công nghệ đằng sau cách mọi thứ hoạt động. Vào những năm 1890, xe đạp trở nên phổ biến trong cả nước. Hai anh em giỏi về việc sửa xe đạp và bắt đầu bán các thiết kế của riêng họ. Họ cũng nghiên cứu công việc của phi công người Đức Otto Lilienthal. Nhưng khi Lilienthal chết trong một tai nạn bay, hai anh em quyết định bắt đầu các thử nghiệm bay của riêng mình. Họ nghiên cứu các loài chim và cách chúng sử dụng cánh để kiểm soát việc bay. Họ sử dụng ý tưởng tương tự để phát minh chiếc máy bay đầu tiên, và vào ngày 17 tháng 12 năm 1903, họ đã thành công. Họ bay chiếc máy bay trên không trong 59 giây.
 
-Many people, however, did not believe the brothers really flew an aeroplane. It had never been done before, and the American people didn't think flying was possible. At that time, Europe was more open to new ideas. So, the brothers moved to Europe in 1908 and spent the next few years trying to sell their aeroplanes. It took Wilbur and Orville many years after their first flight to become famous, but their first 59-second flight changed the history of the world forever.`
+Tuy nhiên, nhiều người không tin rằng hai anh em thực sự bay một chiếc máy bay. Điều này chưa từng được thực hiện trước đây, và người Mỹ không nghĩ rằng việc bay là có thể. Vào thời điểm đó, Châu Âu cởi mở hơn với các ý tưởng mới. Vì vậy, hai anh em chuyển đến Châu Âu vào năm 1908 và dành vài năm tiếp theo cố gắng bán máy bay của họ. Phải mất Wilbur và Orville nhiều năm sau chuyến bay đầu tiên để trở nên nổi tiếng, nhưng chuyến bay đầu tiên kéo dài 59 giây của họ đã thay đổi lịch sử thế giới mãi mãi.`
       };
     }
   };
@@ -76,14 +76,17 @@ Many people, however, did not believe the brothers really flew an aeroplane. It 
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Section 4: Reading</h1>
+        <h1>Phần 4: Đọc hiểu</h1>
         <div className={styles.progress}>
-          Answered {answeredCount} of {questions.length} questions
+          Đã trả lời {answeredCount} / {questions.length} câu
         </div>
       </div>
 
       <div className={styles.readingText}>
-        <h3>{readingText.title}</h3>
+        <h3>
+          <BookOpen size={18} style={{ display: 'inline', marginRight: '8px' }} />
+          {readingText.title}
+        </h3>
         <p style={{ whiteSpace: 'pre-line' }}>{readingText.text}</p>
       </div>
 
@@ -100,7 +103,7 @@ Many people, however, did not believe the brothers really flew an aeroplane. It 
         {questions.map((question, questionIndex) => (
           <div key={questionIndex} className={styles.questionCard}>
             <div className={styles.questionNumber}>
-              Question {questionIndex + 1}
+              Câu {questionIndex + 1}
             </div>
             <div className={styles.questionText}>
               {question.question}
@@ -116,7 +119,7 @@ Many people, however, did not believe the brothers really flew an aeroplane. It 
                   onClick={() => handleAnswerSelect(questionIndex, optionIndex)}
                 >
                   <span className={styles.optionLetter}>
-                    {String.fromCharCode(97 + optionIndex)}
+                    {String.fromCharCode(65 + optionIndex)}
                   </span>
                   {option}
                 </button>
@@ -128,7 +131,7 @@ Many people, however, did not believe the brothers really flew an aeroplane. It 
 
       <div className={styles.navigation}>
         <button className={styles.navButton} onClick={handleNextSection}>
-          Next Section → Speaking
+          Phần tiếp theo → Nói
         </button>
       </div>
     </div>

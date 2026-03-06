@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import { test1Questions } from "@/data/testQuestions";
+import { Headphones } from "lucide-react";
 
 export default function ListeningSection() {
   const router = useRouter();
@@ -35,17 +36,20 @@ export default function ListeningSection() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Section 1: Listening</h1>
+        <h1>Phần 1: Nghe</h1>
         <div className={styles.progress}>
-          Answered {answeredCount} of {questions.length} questions
+          Đã trả lời {answeredCount} / {questions.length} câu
         </div>
       </div>
 
       <div className={styles.audioSection}>
-        <h3>🎧 Audio Instructions</h3>
+        <h3>
+          <Headphones size={20} />
+          Hướng dẫn nghe
+        </h3>
         <p>
-          Click play to start the audio. You will hear conversations and talks,
-          then answer questions about them.
+          Nhấn nút play để bắt đầu nghe. Bạn sẽ nghe các cuộc hội thoại và bài nói,
+          sau đó trả lời các câu hỏi về chúng.
         </p>
         <audio
           controls
@@ -56,12 +60,12 @@ export default function ListeningSection() {
             src="/audio/placement-test-listening.mp3"
             type="audio/mpeg"
           />
-          Your browser does not support the audio element.
+          Trình duyệt của bạn không hỗ trợ phát audio.
         </audio>
         {!audioPlayed && (
-          <p className={styles.audioNote}>
-            Please listen to the audio before answering questions.
-          </p>
+          <div className={styles.audioNote}>
+            Vui lòng nghe audio trước khi trả lời câu hỏi.
+          </div>
         )}
       </div>
 
@@ -78,7 +82,7 @@ export default function ListeningSection() {
         {questions.map((question, questionIndex) => (
           <div key={questionIndex} className={styles.questionCard}>
             <div className={styles.questionNumber}>
-              Question {questionIndex + 1}
+              Câu {questionIndex + 1}
             </div>
             <div className={styles.questionText}>
               {question.question}
@@ -94,7 +98,7 @@ export default function ListeningSection() {
                   onClick={() => handleAnswerSelect(questionIndex, optionIndex)}
                 >
                   <span className={styles.optionLetter}>
-                    {String.fromCharCode(97 + optionIndex)}
+                    {String.fromCharCode(65 + optionIndex)}
                   </span>
                   {option}
                 </button>
@@ -106,7 +110,7 @@ export default function ListeningSection() {
 
       <div className={styles.navigation}>
         <button className={styles.navButton} onClick={handleNextSection}>
-          Next Section → Grammar
+          Phần tiếp theo → Ngữ pháp
         </button>
       </div>
     </div>

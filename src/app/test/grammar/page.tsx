@@ -34,9 +34,9 @@ export default function GrammarSection() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>Section 2: Grammar</h1>
+        <h1>Phần 2: Ngữ pháp</h1>
         <div className={styles.progress}>
-          Answered {answeredCount} of {questions.length} questions
+          Đã trả lời {answeredCount} / {questions.length} câu
         </div>
       </div>
 
@@ -53,7 +53,7 @@ export default function GrammarSection() {
         {questions.map((question, questionIndex) => (
           <div key={questionIndex} className={styles.questionCard}>
             <div className={styles.questionNumber}>
-              Question {questionIndex + 1}
+              Câu {questionIndex + 1}
             </div>
             <div className={styles.questionText}>
               {question.question}
@@ -69,7 +69,7 @@ export default function GrammarSection() {
                   onClick={() => handleAnswerSelect(questionIndex, optionIndex)}
                 >
                   <span className={styles.optionLetter}>
-                    {String.fromCharCode(97 + optionIndex)}
+                    {String.fromCharCode(65 + optionIndex)}
                   </span>
                   {option}
                 </button>
@@ -81,7 +81,7 @@ export default function GrammarSection() {
 
       <div className={styles.navigation}>
         <button className={styles.navButton} onClick={handleNextSection}>
-          Next Section → Vocabulary
+          Phần tiếp theo → Từ vựng
         </button>
       </div>
     </div>
