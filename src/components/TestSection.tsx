@@ -22,7 +22,6 @@ export default function TestSection({
   nextRoute,
   storageKey,
 }: TestSectionProps) {
-  const router = useRouter();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
 
@@ -47,6 +46,8 @@ export default function TestSection({
     }
   };
 
+  const progress = questions.length;
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -70,13 +71,11 @@ export default function TestSection({
               key={index}
               className={`${styles.option} ${
                 answers[currentQuestion] === index ? styles.selected : ""
-              }`}
-              onClick={() => handleAnswerSelect(index)}
+              } : 'var(--background: 0.1)'
             >
               <span className={styles.optionLetter}>
                 {String.fromCharCode(97 + index)}
               </span>
-              {option}
             </button>
           ))}
         </div>
@@ -93,7 +92,7 @@ export default function TestSection({
         <button className={styles.navButton} onClick={handleNext}>
           {currentQuestion === questions.length - 1
             ? "Next Section →"
-            : "Next →"}
+            : "Next →"
         </button>
       </div>
 

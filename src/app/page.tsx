@@ -207,44 +207,23 @@ export default function Home() {
             <p className={styles.subtitle}>Kết hợp tự nhiên và cấu trúc để nói đúng, nói hay</p>
           </div>
 
-          {/* Visual Process */}
-          <div className={styles.methodologyVisual}>
-            <div className={styles.methodologyStep}>
-              <div className={`${styles.methodologyIconWrapper} ${styles.methodologyIconGold}`}>
-                <Zap size={50} style={{ color: 'white' }} />
-              </div>
-              <h3 className={styles.methodologyStepTitle}>Phản Xạ</h3>
-              <p className={styles.methodologyStepText}>
-                Tự nhiên như trẻ em học nói<br />
-                Mở miệng ngay, không đợi hoàn hảo
-              </p>
-            </div>
+          {/* Text-based explanation instead of visual */}
+          <div className={styles.methodologyContent}>
+            <p className={styles.methodologyParagraph}>
+              <strong>Nhiều người học tiếng Anh mãi nhưng vẫn ngại mở miệng.</strong> Lý do không phải vì họ thiếu từ vựng hay ngữ pháp. Vấn đề nằm ở cách họ học — học từ vựng rời rạc, ghép câu thủ công, và dịch thầm từ tiếng Việt sang tiếng Anh trong đầu. Điều này khiến não bộ làm việc quá tải, dẫn đến hiện tượng "quên sạch" khi cần nói.
+            </p>
 
-            <span className={styles.methodologyArrow}>→</span>
+            <p className={styles.methodologyParagraph}>
+              <strong>Phản Xạ Bài Bản</strong> là phương pháp kết hợp hai yếu tố: <strong>tự nhiên</strong> (như trẻ em học nói) và <strong>cấu trúc</strong> (như người trưởng thành phân tích). Trẻ em không học ngữ pháp trước khi nói — chúng học qua bắt chước, lặp lại, và sửa dần. Người trưởng thành cần cấu trúc để hiểu tại sao sao mình nói đúng và tại sao câu đó có nghĩa.
+            </p>
 
-            <div className={styles.methodologyStep}>
-              <div className={`${styles.methodologyIconWrapper} ${styles.methodologyIconNavy}`}>
-                <CheckCircle2 size={50} style={{ color: 'white' }} />
-              </div>
-              <h3 className={styles.methodologyStepTitle}>Bài Bản</h3>
-              <p className={styles.methodologyStepText}>
-                Logic như người trưởng thành<br />
-                Khung mẫu câu rõ ràng
-              </p>
-            </div>
+            <p className={styles.methodologyParagraph}>
+              <strong>Chúng tôi dạy theo chunks và patterns</strong> — các cụm từ và mẫu câu có thể lắp ráp linh hoạt, thay vì học từ vựng đơn lẻ. Bạn sẽ học cách tư duy trực tiếp bằng tiếng Anh, không dịch thầm. Điều này giúp phản xạ nói tự nhiên, đúng cấu trúc, không cần suy nghĩ quá lâu.
+            </p>
 
-            <span className={styles.methodologyArrow}>→</span>
-
-            <div className={styles.methodologyStep}>
-              <div className={`${styles.methodologyIconWrapper} ${styles.methodologyIconAccent}`}>
-                <ArrowRight size={50} style={{ color: 'white' }} />
-              </div>
-              <h3 className={styles.methodologyStepTitle}>Tự Do</h3>
-              <p className={styles.methodologyStepText}>
-                Nói tự tin, đúng ngữ cảnh<br />
-                Tự học trọn đời
-              </p>
-            </div>
+            <p className={styles.methodologyParagraph}>
+              <strong>Trong lớp học:</strong> Bạn sẽ nói từ Ngày 1 trong môi trường an toàn, siêu nhỏ (4-6 người). Giáo viên sửa lỗi ngay lập tức, giúp bạn hoàn thiện dần dần. Không ai cười khi bạn sai — tất cả đều đang học. Kết quả: từ người "sợ nói" thành người tự tin giao tiếp.
+            </p>
           </div>
 
           {/* Comparison Table */}
