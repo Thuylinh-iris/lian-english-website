@@ -1,0 +1,8 @@
+{
+  "name": "lian-english-web",
+  "gitSource": {
+    "type": "github",
+    "ref": "main",
+    "repo": "Thuylinh-iris/lian-english-website"
+  }
+}

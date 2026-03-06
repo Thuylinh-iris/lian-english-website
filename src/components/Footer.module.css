@@ -26,8 +26,8 @@
 .logoImage {
     width: 36px;
     height: 36px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
     border-radius: 8px;
+    object-fit: contain;
 }
 
 .logoText {

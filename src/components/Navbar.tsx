@@ -24,7 +24,13 @@ export default function Navbar() {
         <nav className={`${styles.nav} ${isScrolled ? styles.scrolled : ""}`}>
             <div className={`container ${styles.navContainer}`}>
                 <Link href="/" className={styles.logo}>
-                    <div className={styles.logoImage}></div>
+                    <Image 
+                        src="/lian-english-logo.png" 
+                        alt="Lian English" 
+                        width={40} 
+                        height={40}
+                        className={styles.logoImage}
+                    />
                     <span className={styles.logoText}>Lian English</span>
                 </Link>
 
