@@ -1,6 +1,5 @@
 import styles from "./page.module.css";
 import Button from "@/components/Button";
-import PlacementTest from "@/components/PlacementTest";
 import Image from "next/image";
 import Link from "next/link";
 import { Lightbulb, AlertTriangle, ShieldCheck, CheckCircle2, Zap, ArrowRight, Star, User, HelpCircle } from "lucide-react";
@@ -101,7 +100,7 @@ export default function Home() {
               </div>
 
               <div className={styles.cmaActions}>
-                <Button href="#test" className={styles.primaryBtn}>
+                <Button href="/test" className={styles.primaryBtn}>
                   Kiểm Tra Trình Độ Miễn Phí
                 </Button>
                 <Button href="#methodology" className={styles.secondaryBtn}>
@@ -244,7 +243,7 @@ export default function Home() {
             <p style={{ color: 'var(--color-text-light)', marginBottom: '20px', fontSize: '16px' }}>
               Không chắc mình thuộc cấp độ nào?
             </p>
-            <Button href="#test" className={styles.primaryBtn}>
+            <Button href="/test" className={styles.primaryBtn}>
               Kiểm Tra Trình Độ Miễn Phí
             </Button>
           </div>
@@ -450,7 +449,7 @@ export default function Home() {
 
           {/* CTA */}
           <div style={{ textAlign: 'center', marginTop: '40px' }}>
-            <Button href="#test" className={styles.primaryBtn}>
+            <Button href="/test" className={styles.primaryBtn}>
               Kiểm Tra Trình Độ Miễn Phí
             </Button>
           </div>
@@ -487,7 +486,7 @@ export default function Home() {
                 </li>
               </ul>
               <div style={{ marginTop: '2rem' }}>
-                <Button href="#test" className={styles.primaryBtn}>
+                <Button href="/test" className={styles.primaryBtn}>
                   Trải nghiệm 2 Tuần Thực Hành
                 </Button>
               </div>
@@ -495,39 +494,23 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Placement Test Section - Kept Same */}
-      <section className="section" id="test">
+      {/* CTA Section - Take the Test */}
+      <section className="section" id="cta-test" style={{ background: 'linear-gradient(135deg, #0F2039 0%, #1a3055 100%)' }}>
         <div className="container">
-          <div className={styles.cmaSectionHead}>
-            <h2 className={styles.textNavy}>Kiểm Tra Trình Độ Của Bạn</h2>
-            <p className={styles.subtitle}>5 câu hỏi, 3 phút. Nhận kết quả ngay và lộ trình học phù hợp nhất với bạn. Hoàn toàn miễn phí.</p>
-          </div>
-          <div className={styles.testWrapper}>
-            <PlacementTest />
-          </div>
-
-          {/* What happens after test */}
-          <div style={{ maxWidth: '800px', margin: '40px auto 0', padding: '30px', background: 'var(--color-surface)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--color-border)' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: '700', color: 'var(--color-primary)', marginBottom: '20px', textAlign: 'center' }}>
-              Sau khi hoàn thành test, bạn sẽ nhận được:
-            </h3>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '20px' }}>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <CheckCircle2 size={20} style={{ color: '#10b981', flexShrink: 0, marginTop: '2px' }} />
-                <span style={{ fontSize: '15px', color: 'var(--color-text)' }}>Kết quả trình độ ngay lập tức</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <CheckCircle2 size={20} style={{ color: '#10b981', flexShrink: 0, marginTop: '2px' }} />
-                <span style={{ fontSize: '15px', color: 'var(--color-text)' }}>Lộ trình học được đề xuất</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <CheckCircle2 size={20} style={{ color: '#10b981', flexShrink: 0, marginTop: '2px' }} />
-                <span style={{ fontSize: '15px', color: 'var(--color-text)' }}>Đặt lịch tư vấn 1-1 miễn phí (15 phút)</span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <CheckCircle2 size={20} style={{ color: '#10b981', flexShrink: 0, marginTop: '2px' }} />
-                <span style={{ fontSize: '15px', color: 'var(--color-text)' }}>Giữ chỗ cho lớp khai giảng 26/03</span>
-              </div>
+          <div style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto' }}>
+            <h2 style={{ fontSize: 'clamp(28px, 4vw, 40px)', fontWeight: '800', color: 'white', marginBottom: '20px', lineHeight: '1.2' }}>
+              Kiểm Tra Trình Độ Của Bạn
+            </h2>
+            <p style={{ fontSize: '18px', color: 'rgba(255, 255, 255, 0.85)', marginBottom: '30px', lineHeight: '1.6' }}>
+              80 câu hỏi, khoảng 60 phút. Nhận kết quả ngay và lộ trình học phù hợp nhất với bạn. Hoàn toàn miễn phí.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '15px', alignItems: 'center' }}>
+              <Button href="/test" className={styles.primaryBtn} style={{ background: '#B8860B', border: 'none', fontSize: '18px', padding: '15px 40px' }}>
+                Bắt Đầu Bài Test Miễn Phí
+              </Button>
+              <p style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px' }}>
+                Đăng ký sau khi hoàn thành test
+              </p>
             </div>
           </div>
         </div>
@@ -592,7 +575,7 @@ export default function Home() {
             </div>
 
             {/* CTA Button */}
-            <Button href="#test" className={styles.primaryBtn} style={{ background: '#B8860B', border: 'none', fontSize: '18px', padding: '15px 40px' }}>
+            <Button href="/test" className={styles.primaryBtn} style={{ background: '#B8860B', border: 'none', fontSize: '18px', padding: '15px 40px' }}>
               Đăng Ký Ngay (Miễn Phí Test Trình Độ)
             </Button>
           </div>
@@ -613,7 +596,7 @@ export default function Home() {
 
             {/* CTA Buttons */}
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px', marginBottom: '40px' }}>
-              <Button href="#test" className={styles.primaryBtn} style={{ fontSize: '18px', padding: '15px 40px' }}>
+              <Button href="/test" className={styles.primaryBtn} style={{ fontSize: '18px', padding: '15px 40px' }}>
                 Kiểm Tra Trình Độ Miễn Phí
               </Button>
               <p style={{ color: 'var(--color-text-light)', fontSize: '14px' }}>

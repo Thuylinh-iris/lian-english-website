@@ -316,3 +316,207 @@ button {
 .animation-delay-500 {
   animation-delay: 500ms;
 }
+
+/* ============================================
+   MOBILE-FIRST RESPONSIVE BASE STYLES
+   ============================================ */
+
+/* Mobile (default - max 767px) */
+.container {
+  padding: 0 16px;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 6vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+}
+
+p {
+  font-size: 1rem;
+}
+
+/* Mobile-first grid defaults */
+.grid,
+[class*="grid"] {
+  grid-template-columns: 1fr;
+}
+
+/* Touch-friendly tap targets */
+button,
+a,
+[role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Reduce padding on mobile */
+.section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Stack elements vertically on mobile */
+.flex-row {
+  flex-direction: column;
+}
+
+.flex-row > * {
+  width: 100%;
+}
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+  }
+
+  .flex-row {
+    flex-direction: row;
+  }
+
+  .flex-row > * {
+    width: auto;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 32px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+  }
+}
+
+/* Large Desktop (1280px+) */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 767px) {
+  /* Reduce animation complexity on mobile */
+  .animate-float {
+    animation: none;
+  }
+
+  .animate-glow {
+    animation: none;
+  }
+
+  /* Improve scroll performance */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide decorative elements on mobile for performance */
+  .hero::before,
+  .hero::after {
+    display: none;
+  }
+
+  /* Full-width buttons on mobile */
+  button,
+  .btn,
+  [role="button"] {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Stack multi-column layouts */
+  [style*="grid-template-columns: repeat"] {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Reduce font sizes for better readability */
+  .heroText h1 {
+    font-size: 1.75rem;
+  }
+
+  .editorialHeadline {
+    font-size: 2rem;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode support (optional - for future) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Uncomment to enable dark mode
+    --color-bg: #0F2039;
+    --color-surface: #1a3055;
+    --color-text: #F8F9FA;
+    --color-text-light: #a0aec0;
+    */
+  }
+}
+
+/* Print styles */
+@media print {
+  .section {
+    padding: 20px 0;
+    page-break-inside: avoid;
+  }
+
+  button,
+  .btn {
+    display: none;
+  }
+}
