@@ -225,57 +225,6 @@ export default function Home() {
               <strong>Trong lớp học:</strong> Bạn sẽ nói từ Ngày 1 trong môi trường an toàn, siêu nhỏ (4-6 người). Giáo viên sửa lỗi ngay lập tức, giúp bạn hoàn thiện dần dần. Không ai cười khi bạn sai — tất cả đều đang học. Kết quả: từ người "sợ nói" thành người tự tin giao tiếp.
             </p>
           </div>
-
-          {/* Comparison Table */}
-          <div className={styles.comparisonTable}>
-            <div className={styles.comparisonTableGrid}>
-              <div className={`${styles.comparisonColumn} ${styles.comparisonColumnTraditional}`}>
-                <h3 className={`${styles.comparisonTitle} ${styles.comparisonTitleBad}`}>
-                  ❌ Cách truyền thống
-                </h3>
-                <ul className={styles.comparisonList}>
-                  <li className={styles.comparisonListItem}>
-                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletBad}`}>•</span>
-                    <span className={styles.comparisonText}>Học từ vựng rời rạc, ghép câu thủ công</span>
-                  </li>
-                  <li className={styles.comparisonListItem}>
-                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletBad}`}>•</span>
-                    <span className={styles.comparisonText}>Dịch thầm từ tiếng Việt sang tiếng Anh</span>
-                  </li>
-                  <li className={styles.comparisonListItem}>
-                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletBad}`}>•</span>
-                    <span className={styles.comparisonText}>Đợi học xong ngữ pháp mới dám nói</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className={`${styles.comparisonColumn} ${styles.comparisonColumnOur}`}>
-                <h3 className={`${styles.comparisonTitle} ${styles.comparisonTitleGood}`}>
-                  ✅ Phản Xạ Bài Bản
-                </h3>
-                <ul className={styles.comparisonList}>
-                  <li className={styles.comparisonListItem}>
-                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletGood}`}>✓</span>
-                    <span className={styles.comparisonText}>Học chunks & patterns, lắp ráp linh hoạt</span>
-                  </li>
-                  <li className={styles.comparisonListItem}>
-                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletGood}`}>✓</span>
-                    <span className={styles.comparisonText}>Tư duy trực tiếp bằng tiếng Anh</span>
-                  </li>
-                  <li className={styles.comparisonListItem}>
-                    <span className={`${styles.comparisonBullet} ${styles.comparisonBulletGood}`}>✓</span>
-                    <span className={styles.comparisonText}>Nói từ Ngày 1, hoàn thiện dần dần</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className={styles.comparisonResult}>
-              <p className={styles.comparisonResultText}>
-                Kết quả: Nói tự nhiên, đúng cấu trúc
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
