@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, Zap, ArrowRight, Star, User, HelpCircle } from "lucide-react";
 
+// Force cache bust: v2
+
 export default function Home() {
   return (
     <>
