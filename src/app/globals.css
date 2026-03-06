@@ -61,9 +61,9 @@
   --radius-lg: 24px;
   --radius-xl: 32px;
 
-  /* Typography (using brand fonts) */
-  --font-base: var(--font-inter, -apple-system, BlinkMacSystemFont, sans-serif);
-  --font-heading: var(--font-outfit, -apple-system, BlinkMacSystemFont, sans-serif);
+  /* Typography (using brand font) */
+  --font-base: var(--font-be-vietnam-pro, -apple-system, BlinkMacSystemFont, sans-serif);
+  --font-heading: var(--font-be-vietnam-pro, -apple-system, BlinkMacSystemFont, sans-serif);
 
   /* Layout */
   --max-width: 1100px;

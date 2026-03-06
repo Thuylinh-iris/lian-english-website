@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin", "vietnamese"],
-});
-
-const outfit = Montserrat({
-  variable: "--font-outfit",
-  subsets: ["latin", "vietnamese"],
+const beVietnamPro = Be_Vietnam_Pro({
+  variable: "--font-be-vietnam-pro",
+  subsets: ["vietnamese", "latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -60,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={`${inter.variable} ${outfit.variable}`}>
+    <html lang="vi" className={beVietnamPro.variable}>
       <body>
         <Navbar />
         <main>{children}</main>

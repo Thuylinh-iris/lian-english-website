@@ -1,77 +1,101 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
+import { Headphones, BookOpen, Mic, PenTool, Lightbulb, Mail } from "lucide-react";
 
 export default function TestWelcomePage() {
   const router = useRouter();
-  const [experience, setExperience] = useState<string>("");
 
   const handleStart = () => {
-    // All students take Test 1 (A1-B1) since we don't offer B1-B2+ courses
     router.push("/test/listening");
   };
 
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <h1 className={styles.title}>Placement Test</h1>
+        <h1 className={styles.title}>Bài Kiểm Tra Trình Độ</h1>
 
-        <div className={styles.info}>
-          <p className={styles.description}>
-            This test helps us place you in the right class level. It takes
-            about <strong>60 minutes</strong> to complete.
+        <p className={styles.description}>
+          Bài test này giúp chúng tôi xếp bạn vào lớp phù hợp. 
+          Thời gian hoàn thành khoảng <strong>60 phút</strong>.
+        </p>
+
+        <div className={styles.sections}>
+          <h3 className={styles.sectionTitle}>Các phần bài test:</h3>
+          <ul className={styles.sectionList}>
+            <li>
+              <Headphones size={18} className={styles.icon} />
+              <div>
+                <strong>Nghe</strong>
+                <span>20 câu hỏi (audio)</span>
+              </div>
+            </li>
+            <li>
+              <BookOpen size={18} className={styles.icon} />
+              <div>
+                <strong>Ngữ pháp</strong>
+                <span>30 câu hỏi</span>
+              </div>
+            </li>
+            <li>
+              <BookOpen size={18} className={styles.icon} />
+              <div>
+                <strong>Từ vựng</strong>
+                <span>20 câu hỏi</span>
+              </div>
+            </li>
+            <li>
+              <BookOpen size={18} className={styles.icon} />
+              <div>
+                <strong>Đọc hiểu</strong>
+                <span>10 câu hỏi (3 bài đọc)</span>
+              </div>
+            </li>
+            <li>
+              <Mic size={18} className={styles.icon} />
+              <div>
+                <strong>Nói</strong>
+                <span>2 bài (ghi âm audio)</span>
+              </div>
+            </li>
+            <li>
+                <PenTool size={18} className={styles.icon} />
+              <div>
+                <strong>Viết</strong>
+                <span>1 bài (tùy chọn, 30 phút)</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div className={styles.tips}>
+          <h3>
+            <Lightbulb size={20} className={styles.icon} />
+            Lưu ý:
+          </h3>
+          <ul>
+            <li>Tìm nơi yên tĩnh để tập trung</li>
+            <li>Sử dụng tai nghe cho phần nghe</li>
+            <li>Có thể nghỉ giữa các phần</li>
+            <li>Trả lời trung thực - không có trình độ "đúng" hay "sai"</li>
+          </ul>
+        </div>
+
+        <div className={styles.note}>
+          <Mail size={18} className={styles.icon} />
+          <p>
+            <strong>Lưu ý:</strong> Bạn cần cung cấp email để nhận kết quả.
           </p>
-
-          <div className={styles.sections}>
-            <h3>Test Sections:</h3>
-            <ul>
-              <li>
-                <strong>Listening</strong> - 20 questions (audio)
-              </li>
-              <li>
-                <strong>Grammar</strong> - 30 questions
-              </li>
-              <li>
-                <strong>Vocabulary</strong> - 20 questions
-              </li>
-              <li>
-                <strong>Reading</strong> - 10 questions (3 passages)
-              </li>
-              <li>
-                <strong>Speaking</strong> - 2 tasks (audio recording)
-              </li>
-              <li>
-                <strong>Writing</strong> - 1 task (optional, 30 minutes)
-              </li>
-            </ul>
-          </div>
-
-          <div className={styles.tips}>
-            <h3>📋 Tips:</h3>
-            <ul>
-              <li>Find a quiet place where you can focus</li>
-              <li>Use headphones for the listening section</li>
-              <li>You can take breaks between sections</li>
-              <li>Answer honestly - there are no "right" or "wrong" levels</li>
-            </ul>
-          </div>
-
-          <div className={styles.note}>
-            <p>
-              <strong>Note:</strong> Your email will be required at the end to
-              receive your results.
-            </p>
-          </div>
         </div>
 
         <button className={styles.startButton} onClick={handleStart}>
-          Start Test →
+          Bắt đầu bài test →
         </button>
 
         <p className={styles.privacy}>
-          By starting this test, you agree to receive email communications from
-          Lian English. You can unsubscribe at any time.
+          Bằng cách bắt đầu bài test này, bạn đồng ý nhận email từ Lian English. 
+          Bạn có thể hủy đăng ký bất kỳ lúc nào.
         </p>
       </div>
     </div>
