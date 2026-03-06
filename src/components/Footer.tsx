@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Footer.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Mail } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -54,8 +54,14 @@ export default function Footer() {
 
                 <div className={styles.footerContact}>
                     <h4 className={styles.footerTitle}>Liên Hệ</h4>
-                    <p><a href="https://m.me/lianenglish" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>📘 Facebook Messenger</a></p>
-                    <p><Mail size={18} className={styles.footerIcon} /> <a href="mailto:fluencybeyondtests@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>fluencybeyondtests@gmail.com</a></p>
+                    <p>
+                        <MessageCircle size={18} className={styles.footerIcon} />
+                        <a href="https://m.me/lianenglish" target="_blank" rel="noreferrer">Facebook Messenger</a>
+                    </p>
+                    <p>
+                        <Mail size={18} className={styles.footerIcon} />
+                        <a href="mailto:fluencybeyondtests@gmail.com">fluencybeyondtests@gmail.com</a>
+                    </p>
                 </div>
             </div>
 

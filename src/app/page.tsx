@@ -268,28 +268,6 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Contact Options */}
-            <div className={styles.finalCtaContacts}>
-              <div className={styles.contactItem}>
-                <div className={`${styles.contactIcon} ${styles.contactIconFacebook}`}>
-                  <span style={{ color: 'white', fontSize: '18px' }}>📘</span>
-                </div>
-                <div className={styles.contactInfo}>
-                  <p className={styles.contactLabel}>Facebook</p>
-                  <p className={styles.contactValue}>Lian English</p>
-                </div>
-              </div>
-              <div className={styles.contactItem}>
-                <div className={`${styles.contactIcon} ${styles.contactIconEmail}`}>
-                  <span style={{ color: 'white', fontSize: '18px' }}>✉️</span>
-                </div>
-                <div className={styles.contactInfo}>
-                  <p className={styles.contactLabel}>Email</p>
-                  <p className={styles.contactValue}>fluencybeyondtests@gmail.com</p>
-                </div>
-              </div>
-            </div>
-
             {/* Key Info */}
             <div className={styles.keyInfo}>
               <p><CheckCircle2 size={18} className={styles.textAccent} /> Lớp siêu nhỏ 4-6 người</p>
