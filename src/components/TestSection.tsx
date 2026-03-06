@@ -22,6 +22,7 @@ export default function TestSection({
   nextRoute,
   storageKey,
 }: TestSectionProps) {
+  const router = useRouter();
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
 
