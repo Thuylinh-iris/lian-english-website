@@ -15,6 +15,7 @@ export default function ResultsPage() {
   const [totalScore, setTotalScore] = useState(0);
   const [recommendedClass, setRecommendedClass] = useState("");
   const [studentName, setStudentName] = useState("");
+  const [speakingAssessment, setSpeakingAssessment] = useState<any>(null);
 
   useEffect(() => {
     // Load answers from localStorage
@@ -23,6 +24,11 @@ export default function ResultsPage() {
     const vocabularyAnswers = JSON.parse(localStorage.getItem("vocabularyAnswers") || "[]");
     const readingAnswers = JSON.parse(localStorage.getItem("readingAnswers") || "[]");
     const name = localStorage.getItem("studentName") || "";
+    const speakingData = localStorage.getItem("speakingAssessment");
+    
+    if (speakingData) {
+      setSpeakingAssessment(JSON.parse(speakingData));
+    }
 
     setStudentName(name);
 
@@ -166,6 +172,37 @@ export default function ResultsPage() {
             </div>
           </div>
         </div>
+
+        {speakingAssessment && (
+          <div className={styles.speakingSection}>
+            <h3>🎯 Speaking Assessment</h3>
+            <div className={styles.speakingLevel}>
+              <span className={styles.levelBadge}>{speakingAssessment.level}</span>
+              <span className={styles.speakingScore}>Score: {speakingAssessment.score}/100</span>
+            </div>
+            <div className={styles.transcription}>
+              <h4>What you said:</h4>
+              <p>"{speakingAssessment.transcription}"</p>
+            </div>
+            <div className={styles.feedbackGrid}>
+              <div className={styles.feedbackItem}>
+                <strong>Fluency:</strong> {speakingAssessment.feedback.fluency}
+              </div>
+              <div className={styles.feedbackItem}>
+                <strong>Grammar:</strong> {speakingAssessment.feedback.grammar}
+              </div>
+              <div className={styles.feedbackItem}>
+                <strong>Vocabulary:</strong> {speakingAssessment.feedback.vocabulary}
+              </div>
+              <div className={styles.feedbackItem}>
+                <strong>Pronunciation:</strong> {speakingAssessment.feedback.pronunciation}
+              </div>
+            </div>
+            <div className={styles.overallFeedback}>
+              <strong>Overall:</strong> {speakingAssessment.overallFeedback}
+            </div>
+          </div>
+        )}
 
         <div className={styles.recommendation}>
           <h3>Recommended Class</h3>

@@ -232,3 +232,94 @@
     padding: 16px;
   }
 }
+
+/* Speaking Assessment Styles */
+.speakingSection {
+  background: #f8f9fa;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.speakingSection h3 {
+  color: #0F2039;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.speakingLevel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid #B8860B;
+}
+
+.speakingScore {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.transcription {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.transcription h4 {
+  color: #0F2039;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.transcription p {
+  color: #5A6C7D;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.feedbackGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.feedbackItem {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.feedbackItem strong {
+  color: #B8860B;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.overallFeedback {
+  background: #fff8e1;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #B8860B;
+}
+
+.overallFeedback strong {
+  color: #B8860B;
+  display: block;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+  .feedbackGrid {
+    grid-template-columns: 1fr;
+  }
+}

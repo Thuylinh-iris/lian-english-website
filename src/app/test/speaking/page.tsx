@@ -10,13 +10,19 @@ export default function SpeakingSection() {
   const [countdown, setCountdown] = useState(60);
   const [permissionDenied, setPermissionDenied] = useState(false);
   const [audioBlob, setAudioBlob] = useState<Blob | null>(null);
+  const [isAssessing, setIsAssessing] = useState(false);
+  const [assessmentResult, setAssessmentResult] = useState<any>(null);
 
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
   const audioChunksRef = useRef<Blob[]>([]);
   const countdownRef = useRef<NodeJS.Timeout | null>(null);
 
+  const speakingTask = {
+    prompt: "Think of a close friend. How did you meet? Describe his or her personality, and talk about what you like most about him/her.",
+    task: "Describe a friend"
+  };
+
   useEffect(() => {
-    // Cleanup on unmount
     return () => {
       if (countdownRef.current) {
         clearInterval(countdownRef.current);
@@ -32,7 +38,9 @@ export default function SpeakingSection() {
       setPermissionDenied(false);
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
       
-      const mediaRecorder = new MediaRecorder(stream);
+      const mediaRecorder = new MediaRecorder(stream, {
+        mimeType: 'audio/webm;codecs=opus'
+      });
       mediaRecorderRef.current = mediaRecorder;
       audioChunksRef.current = [];
 
@@ -49,14 +57,6 @@ export default function SpeakingSection() {
         setAudioBlob(audioBlob);
         setRecordingComplete(true);
         
-        // Save to localStorage (base64)
-        const reader = new FileReader();
-        reader.readAsDataURL(audioBlob);
-        reader.onloadend = () => {
-          const base64data = reader.result as string;
-          localStorage.setItem('speakingRecording', base64data);
-        };
-
         // Stop all tracks
         stream.getTracks().forEach(track => track.stop());
       };
@@ -65,7 +65,6 @@ export default function SpeakingSection() {
       setIsRecording(true);
       setCountdown(60);
 
-      // Start countdown
       countdownRef.current = setInterval(() => {
         setCountdown((prev) => {
           if (prev <= 1) {
@@ -97,12 +96,46 @@ export default function SpeakingSection() {
     setAudioURL(null);
     setAudioBlob(null);
     setCountdown(60);
+    setAssessmentResult(null);
     localStorage.removeItem('speakingRecording');
+    localStorage.removeItem('speakingAssessment');
   };
 
-  const handleContinue = async () => {
-    // If we have a recording, we could send it to the server for assessment
-    // For now, just move to email capture
+  const handleAssess = async () => {
+    if (!audioBlob) return;
+
+    setIsAssessing(true);
+
+    try {
+      const formData = new FormData();
+      formData.append('audio', audioBlob, 'recording.webm');
+      formData.append('prompt', speakingTask.prompt);
+      formData.append('task', speakingTask.task);
+
+      const response = await fetch('/api/assess-speaking', {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setAssessmentResult(result.assessment);
+        // Save to localStorage
+        localStorage.setItem('speakingAssessment', JSON.stringify(result.assessment));
+        localStorage.setItem('speakingTranscription', result.assessment.transcription);
+      } else {
+        alert('Assessment failed: ' + result.error);
+      }
+    } catch (error) {
+      console.error('Error assessing speaking:', error);
+      alert('Failed to assess speaking. Please try again.');
+    } finally {
+      setIsAssessing(false);
+    }
+  };
+
+  const handleContinue = () => {
     router.push("/test/email-capture");
   };
 
@@ -113,7 +146,7 @@ export default function SpeakingSection() {
   return (
     <div
       style={{
-        maxWidth: "800px",
+        maxWidth: "900px",
         margin: "0 auto",
         padding: "40px 20px",
         textAlign: "center",
@@ -134,10 +167,9 @@ export default function SpeakingSection() {
           boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
         }}
       >
-        <h3 style={{ marginBottom: "15px", color: "#0F2039" }}>Task: Talk about a friend</h3>
+        <h3 style={{ marginBottom: "15px", color: "#0F2039" }}>Task: {speakingTask.task}</h3>
         <p style={{ marginBottom: "20px", color: "#5A6C7D", lineHeight: "1.6" }}>
-          Think of a close friend. How did you meet? Describe his or her
-          personality, and talk about what you like most about him/her.
+          {speakingTask.prompt}
         </p>
         <p style={{ fontSize: "0.9rem", color: "#B8860B", marginBottom: "20px" }}>
           Duration: Maximum 60 seconds
@@ -205,13 +237,125 @@ export default function SpeakingSection() {
           </div>
         )}
 
-        {recordingComplete && audioURL && (
+        {recordingComplete && audioURL && !assessmentResult && (
           <div>
             <p style={{ color: "#10b981", marginBottom: "15px", fontWeight: "600" }}>
               ✅ Recording Complete!
             </p>
             <audio controls src={audioURL} style={{ width: "100%", marginBottom: "20px" }} />
-            <div style={{ display: "flex", gap: "15px", justifyContent: "center" }}>
+            
+            <div style={{ display: "flex", gap: "15px", justifyContent: "center", flexWrap: "wrap" }}>
+              <button
+                onClick={handleRetake}
+                style={{
+                  padding: "12px 30px",
+                  background: "#5A6C7D",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                }}
+              >
+                🔄 Retake
+              </button>
+              <button
+                onClick={handleAssess}
+                disabled={isAssessing}
+                style={{
+                  padding: "12px 30px",
+                  background: isAssessing ? "#9ca3af" : "#B8860B",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "8px",
+                  cursor: isAssessing ? "not-allowed" : "pointer",
+                }}
+              >
+                {isAssessing ? "⏳ Assessing..." : "🤖 Get AI Assessment"}
+              </button>
+              <button
+                onClick={handleContinue}
+                style={{
+                  padding: "12px 30px",
+                  background: "#10b981",
+                  color: "white",
+                  border: "none",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                }}
+              >
+                Continue →
+              </button>
+            </div>
+          </div>
+        )}
+
+        {assessmentResult && (
+          <div style={{ marginTop: "30px", textAlign: "left" }}>
+            <h3 style={{ color: "#0F2039", marginBottom: "20px", textAlign: "center" }}>
+              🎯 AI Assessment Results
+            </h3>
+            
+            <div style={{ 
+              background: "#f0fdf4", 
+              padding: "20px", 
+              borderRadius: "8px", 
+              marginBottom: "20px",
+              border: "2px solid #10b981"
+            }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "15px" }}>
+                <span style={{ fontSize: "1.2rem", fontWeight: "600", color: "#0F2039" }}>
+                  Level: {assessmentResult.level}
+                </span>
+                <span style={{ fontSize: "1.5rem", fontWeight: "700", color: "#10b981" }}>
+                  Score: {assessmentResult.score}/100
+                </span>
+              </div>
+            </div>
+
+            <div style={{ marginBottom: "20px" }}>
+              <h4 style={{ color: "#0F2039", marginBottom: "10px" }}>📝 What you said:</h4>
+              <p style={{ 
+                background: "#f8f9fa", 
+                padding: "15px", 
+                borderRadius: "8px",
+                fontStyle: "italic",
+                color: "#5A6C7D"
+              }}>
+                "{assessmentResult.transcription}"
+              </p>
+            </div>
+
+            <div style={{ marginBottom: "20px" }}>
+              <h4 style={{ color: "#0F2039", marginBottom: "15px" }}>📊 Detailed Feedback:</h4>
+              <div style={{ display: "grid", gap: "10px" }}>
+                <div style={{ background: "#f8f9fa", padding: "12px", borderRadius: "8px" }}>
+                  <strong style={{ color: "#B8860B" }}>Fluency:</strong> {assessmentResult.feedback.fluency}
+                </div>
+                <div style={{ background: "#f8f9fa", padding: "12px", borderRadius: "8px" }}>
+                  <strong style={{ color: "#B8860B" }}>Grammar:</strong> {assessmentResult.feedback.grammar}
+                </div>
+                <div style={{ background: "#f8f9fa", padding: "12px", borderRadius: "8px" }}>
+                  <strong style={{ color: "#B8860B" }}>Vocabulary:</strong> {assessmentResult.feedback.vocabulary}
+                </div>
+                <div style={{ background: "#f8f9fa", padding: "12px", borderRadius: "8px" }}>
+                  <strong style={{ color: "#B8860B" }}>Pronunciation:</strong> {assessmentResult.feedback.pronunciation}
+                </div>
+              </div>
+            </div>
+
+            <div style={{ 
+              background: "#fff8e1", 
+              padding: "15px", 
+              borderRadius: "8px",
+              border: "2px solid #B8860B"
+            }}>
+              <strong style={{ color: "#B8860B" }}>💡 Overall Feedback:</strong>
+              <p style={{ marginTop: "10px", color: "#0F2039" }}>
+                {assessmentResult.overallFeedback}
+              </p>
+            </div>
+
+            <div style={{ marginTop: "20px", display: "flex", gap: "15px", justifyContent: "center" }}>
               <button
                 onClick={handleRetake}
                 style={{
