@@ -9,6 +9,7 @@ interface ButtonProps {
     onClick?: () => void;
     className?: string;
     fullWidth?: boolean;
+    style?: React.CSSProperties;
 }
 
 export default function Button({
@@ -17,19 +18,20 @@ export default function Button({
     href,
     onClick,
     className = "",
-    fullWidth = false
+    fullWidth = false,
+    style
 }: ButtonProps) {
     const btnClass = `${styles.btn} ${styles[variant]} ${fullWidth ? styles.fullWidth : ""} ${className}`;
 
     if (href) {
         if (href.startsWith("http")) {
-            return <a href={href} target="_blank" rel="noopener noreferrer" className={btnClass}>{children}</a>;
+            return <a href={href} target="_blank" rel="noopener noreferrer" className={btnClass} style={style}>{children}</a>;
         }
-        return <Link href={href} className={btnClass}>{children}</Link>;
+        return <Link href={href} className={btnClass} style={style}>{children}</Link>;
     }
 
     return (
-        <button onClick={onClick} className={btnClass}>
+        <button onClick={onClick} className={btnClass} style={style}>
             {children}
         </button>
     );
